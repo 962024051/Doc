@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sequelize-CLI | 语法规则文档</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?095b36cf1d99d72592fe316abe8bbbb2";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+        </script>
+    <meta name="description" content="个人程序员博客">
+    <meta name="keywords" content="it教程 语法 算法 设计 游览器 软件 http v8 JavaScript">
+    
+    <link rel="preload" href="/Doc/assets/css/0.styles.1a8630d9.css" as="style"><link rel="preload" href="/Doc/assets/js/app.902b9bb4.js" as="script"><link rel="preload" href="/Doc/assets/js/2.ef0a363d.js" as="script"><link rel="preload" href="/Doc/assets/js/88.1051a51d.js" as="script"><link rel="prefetch" href="/Doc/assets/js/10.bfe6afa3.js"><link rel="prefetch" href="/Doc/assets/js/100.e9ca59b4.js"><link rel="prefetch" href="/Doc/assets/js/101.350cd20f.js"><link rel="prefetch" href="/Doc/assets/js/102.2fa4848d.js"><link rel="prefetch" href="/Doc/assets/js/103.5fb219be.js"><link rel="prefetch" href="/Doc/assets/js/104.c8f406a4.js"><link rel="prefetch" href="/Doc/assets/js/105.a5cf4d82.js"><link rel="prefetch" href="/Doc/assets/js/106.26c15bbe.js"><link rel="prefetch" href="/Doc/assets/js/107.3b58e53b.js"><link rel="prefetch" href="/Doc/assets/js/108.701eed5f.js"><link rel="prefetch" href="/Doc/assets/js/109.73c4bd21.js"><link rel="prefetch" href="/Doc/assets/js/11.7a873ab3.js"><link rel="prefetch" href="/Doc/assets/js/110.4c23333e.js"><link rel="prefetch" href="/Doc/assets/js/111.6c703e6b.js"><link rel="prefetch" href="/Doc/assets/js/112.0a0f1811.js"><link rel="prefetch" href="/Doc/assets/js/113.4ca59157.js"><link rel="prefetch" href="/Doc/assets/js/114.4c45fa82.js"><link rel="prefetch" href="/Doc/assets/js/115.b54cb9e8.js"><link rel="prefetch" href="/Doc/assets/js/116.0a9f1718.js"><link rel="prefetch" href="/Doc/assets/js/117.0333d307.js"><link rel="prefetch" href="/Doc/assets/js/118.15810dc0.js"><link rel="prefetch" href="/Doc/assets/js/119.fb6bd50e.js"><link rel="prefetch" href="/Doc/assets/js/12.0310e52c.js"><link rel="prefetch" href="/Doc/assets/js/120.0d8912ce.js"><link rel="prefetch" href="/Doc/assets/js/121.1386ef9e.js"><link rel="prefetch" href="/Doc/assets/js/122.3b067808.js"><link rel="prefetch" href="/Doc/assets/js/123.5b03d87b.js"><link rel="prefetch" href="/Doc/assets/js/124.e0c0407d.js"><link rel="prefetch" href="/Doc/assets/js/125.3e7a53ae.js"><link rel="prefetch" href="/Doc/assets/js/126.95285aba.js"><link rel="prefetch" href="/Doc/assets/js/127.13293cc6.js"><link rel="prefetch" href="/Doc/assets/js/128.dba5bf2b.js"><link rel="prefetch" href="/Doc/assets/js/129.25ad6778.js"><link rel="prefetch" href="/Doc/assets/js/13.1ea9025d.js"><link rel="prefetch" href="/Doc/assets/js/130.333fabc8.js"><link rel="prefetch" href="/Doc/assets/js/131.9ee9c4d4.js"><link rel="prefetch" href="/Doc/assets/js/132.26dd28fb.js"><link rel="prefetch" href="/Doc/assets/js/133.72fe1499.js"><link rel="prefetch" href="/Doc/assets/js/134.581dfa04.js"><link rel="prefetch" href="/Doc/assets/js/135.e597f508.js"><link rel="prefetch" href="/Doc/assets/js/136.4e47ab6f.js"><link rel="prefetch" href="/Doc/assets/js/137.47023e2c.js"><link rel="prefetch" href="/Doc/assets/js/138.088bbc2c.js"><link rel="prefetch" href="/Doc/assets/js/139.c499414e.js"><link rel="prefetch" href="/Doc/assets/js/14.c7b4d29a.js"><link rel="prefetch" href="/Doc/assets/js/140.8f0391ef.js"><link rel="prefetch" href="/Doc/assets/js/141.cd869971.js"><link rel="prefetch" href="/Doc/assets/js/142.fb16fba9.js"><link rel="prefetch" href="/Doc/assets/js/143.c8152fca.js"><link rel="prefetch" href="/Doc/assets/js/144.be9e4201.js"><link rel="prefetch" href="/Doc/assets/js/145.7a714d15.js"><link rel="prefetch" href="/Doc/assets/js/146.6ba66980.js"><link rel="prefetch" href="/Doc/assets/js/147.57a2928a.js"><link rel="prefetch" href="/Doc/assets/js/148.9e971576.js"><link rel="prefetch" href="/Doc/assets/js/149.4f248cdc.js"><link rel="prefetch" href="/Doc/assets/js/15.05bd0385.js"><link rel="prefetch" href="/Doc/assets/js/150.0c757b5b.js"><link rel="prefetch" href="/Doc/assets/js/151.9994308b.js"><link rel="prefetch" href="/Doc/assets/js/152.6ad248d4.js"><link rel="prefetch" href="/Doc/assets/js/153.892dad93.js"><link rel="prefetch" href="/Doc/assets/js/154.41b98c54.js"><link rel="prefetch" href="/Doc/assets/js/155.26c67a5c.js"><link rel="prefetch" href="/Doc/assets/js/156.0d3ec8c6.js"><link rel="prefetch" href="/Doc/assets/js/157.b65ea00d.js"><link rel="prefetch" href="/Doc/assets/js/158.699d75aa.js"><link rel="prefetch" href="/Doc/assets/js/159.3a37359f.js"><link rel="prefetch" href="/Doc/assets/js/16.f9780864.js"><link rel="prefetch" href="/Doc/assets/js/160.3da88b09.js"><link rel="prefetch" href="/Doc/assets/js/161.2c6b66e6.js"><link rel="prefetch" href="/Doc/assets/js/162.6dbc37b9.js"><link rel="prefetch" href="/Doc/assets/js/163.593ce4e6.js"><link rel="prefetch" href="/Doc/assets/js/164.b9e67673.js"><link rel="prefetch" href="/Doc/assets/js/165.b84f179f.js"><link rel="prefetch" href="/Doc/assets/js/166.e8668636.js"><link rel="prefetch" href="/Doc/assets/js/167.3a5629c2.js"><link rel="prefetch" href="/Doc/assets/js/168.33878e6f.js"><link rel="prefetch" href="/Doc/assets/js/169.a4504567.js"><link rel="prefetch" href="/Doc/assets/js/17.c31c77a9.js"><link rel="prefetch" href="/Doc/assets/js/170.856970c7.js"><link rel="prefetch" href="/Doc/assets/js/171.28cfe480.js"><link rel="prefetch" href="/Doc/assets/js/172.f9cfa133.js"><link rel="prefetch" href="/Doc/assets/js/173.a892767c.js"><link rel="prefetch" href="/Doc/assets/js/174.2b94ba53.js"><link rel="prefetch" href="/Doc/assets/js/175.c147e1c4.js"><link rel="prefetch" href="/Doc/assets/js/176.ccfcf1f3.js"><link rel="prefetch" href="/Doc/assets/js/177.3135c930.js"><link rel="prefetch" href="/Doc/assets/js/178.fdd3aa9b.js"><link rel="prefetch" href="/Doc/assets/js/179.4c53d695.js"><link rel="prefetch" href="/Doc/assets/js/18.5aea91fc.js"><link rel="prefetch" href="/Doc/assets/js/180.80b88bac.js"><link rel="prefetch" href="/Doc/assets/js/181.c4ea4a54.js"><link rel="prefetch" href="/Doc/assets/js/182.1c41e0c8.js"><link rel="prefetch" href="/Doc/assets/js/183.0e7aa89c.js"><link rel="prefetch" href="/Doc/assets/js/184.ddb49815.js"><link rel="prefetch" href="/Doc/assets/js/185.43d46113.js"><link rel="prefetch" href="/Doc/assets/js/186.82d42bbb.js"><link rel="prefetch" href="/Doc/assets/js/187.798b8a87.js"><link rel="prefetch" href="/Doc/assets/js/188.9790c3f6.js"><link rel="prefetch" href="/Doc/assets/js/189.f18287c5.js"><link rel="prefetch" href="/Doc/assets/js/19.6d5427d3.js"><link rel="prefetch" href="/Doc/assets/js/190.bb521583.js"><link rel="prefetch" href="/Doc/assets/js/191.c1df15fe.js"><link rel="prefetch" href="/Doc/assets/js/192.8ae7fc57.js"><link rel="prefetch" href="/Doc/assets/js/193.a8ffb714.js"><link rel="prefetch" href="/Doc/assets/js/194.4ea6e979.js"><link rel="prefetch" href="/Doc/assets/js/195.661928cf.js"><link rel="prefetch" href="/Doc/assets/js/196.2871d148.js"><link rel="prefetch" href="/Doc/assets/js/197.a0fbbc31.js"><link rel="prefetch" href="/Doc/assets/js/198.8a6086cf.js"><link rel="prefetch" href="/Doc/assets/js/199.7c5a4941.js"><link rel="prefetch" href="/Doc/assets/js/20.21cbeb2c.js"><link rel="prefetch" href="/Doc/assets/js/200.1d71cca8.js"><link rel="prefetch" href="/Doc/assets/js/201.e0d7f426.js"><link rel="prefetch" href="/Doc/assets/js/202.cdbd7fa8.js"><link rel="prefetch" href="/Doc/assets/js/203.912f6eea.js"><link rel="prefetch" href="/Doc/assets/js/204.3056439f.js"><link rel="prefetch" href="/Doc/assets/js/205.5c3b6d2b.js"><link rel="prefetch" href="/Doc/assets/js/21.9240dd91.js"><link rel="prefetch" href="/Doc/assets/js/22.1f345886.js"><link rel="prefetch" href="/Doc/assets/js/23.1c444557.js"><link rel="prefetch" href="/Doc/assets/js/24.71752224.js"><link rel="prefetch" href="/Doc/assets/js/25.e4c40493.js"><link rel="prefetch" href="/Doc/assets/js/26.e14fc7b9.js"><link rel="prefetch" href="/Doc/assets/js/27.58dc8d5a.js"><link rel="prefetch" href="/Doc/assets/js/28.a28fd450.js"><link rel="prefetch" href="/Doc/assets/js/29.fa0f7af7.js"><link rel="prefetch" href="/Doc/assets/js/3.6b10a4e1.js"><link rel="prefetch" href="/Doc/assets/js/30.4c3f2713.js"><link rel="prefetch" href="/Doc/assets/js/31.7ba3335c.js"><link rel="prefetch" href="/Doc/assets/js/32.6b88210a.js"><link rel="prefetch" href="/Doc/assets/js/33.c99cb034.js"><link rel="prefetch" href="/Doc/assets/js/34.09cff75c.js"><link rel="prefetch" href="/Doc/assets/js/35.4a58c974.js"><link rel="prefetch" href="/Doc/assets/js/36.5c953857.js"><link rel="prefetch" href="/Doc/assets/js/37.1671a7ad.js"><link rel="prefetch" href="/Doc/assets/js/38.380133a3.js"><link rel="prefetch" href="/Doc/assets/js/39.2a488ded.js"><link rel="prefetch" href="/Doc/assets/js/4.ede3f828.js"><link rel="prefetch" href="/Doc/assets/js/40.cd7ef327.js"><link rel="prefetch" href="/Doc/assets/js/41.fe807f24.js"><link rel="prefetch" href="/Doc/assets/js/42.27a40b2f.js"><link rel="prefetch" href="/Doc/assets/js/43.e43f9d47.js"><link rel="prefetch" href="/Doc/assets/js/44.7163648d.js"><link rel="prefetch" href="/Doc/assets/js/45.cdf2f6e4.js"><link rel="prefetch" href="/Doc/assets/js/46.a59fbcbb.js"><link rel="prefetch" href="/Doc/assets/js/47.1791198b.js"><link rel="prefetch" href="/Doc/assets/js/48.30028b36.js"><link rel="prefetch" href="/Doc/assets/js/49.b1c8b036.js"><link rel="prefetch" href="/Doc/assets/js/5.1ced6b4d.js"><link rel="prefetch" href="/Doc/assets/js/50.3af400d8.js"><link rel="prefetch" href="/Doc/assets/js/51.479c455f.js"><link rel="prefetch" href="/Doc/assets/js/52.f6ba9656.js"><link rel="prefetch" href="/Doc/assets/js/53.75707613.js"><link rel="prefetch" href="/Doc/assets/js/54.e6ee4d56.js"><link rel="prefetch" href="/Doc/assets/js/55.cc09373a.js"><link rel="prefetch" href="/Doc/assets/js/56.ec5aa133.js"><link rel="prefetch" href="/Doc/assets/js/57.7c675995.js"><link rel="prefetch" href="/Doc/assets/js/58.232fb460.js"><link rel="prefetch" href="/Doc/assets/js/59.e7b2c02e.js"><link rel="prefetch" href="/Doc/assets/js/6.6179bc64.js"><link rel="prefetch" href="/Doc/assets/js/60.3a7ec6ee.js"><link rel="prefetch" href="/Doc/assets/js/61.c2e5ee30.js"><link rel="prefetch" href="/Doc/assets/js/62.917a57dc.js"><link rel="prefetch" href="/Doc/assets/js/63.f0f970d0.js"><link rel="prefetch" href="/Doc/assets/js/64.760669a7.js"><link rel="prefetch" href="/Doc/assets/js/65.598b113c.js"><link rel="prefetch" href="/Doc/assets/js/66.7eea90e5.js"><link rel="prefetch" href="/Doc/assets/js/67.98d79278.js"><link rel="prefetch" href="/Doc/assets/js/68.cafd5bb4.js"><link rel="prefetch" href="/Doc/assets/js/69.2ee8ebe5.js"><link rel="prefetch" href="/Doc/assets/js/7.50f6511d.js"><link rel="prefetch" href="/Doc/assets/js/70.952c63c9.js"><link rel="prefetch" href="/Doc/assets/js/71.63bcbbaf.js"><link rel="prefetch" href="/Doc/assets/js/72.94a7e949.js"><link rel="prefetch" href="/Doc/assets/js/73.3188d0f2.js"><link rel="prefetch" href="/Doc/assets/js/74.0249309e.js"><link rel="prefetch" href="/Doc/assets/js/75.339b50b9.js"><link rel="prefetch" href="/Doc/assets/js/76.c80850da.js"><link rel="prefetch" href="/Doc/assets/js/77.637f0447.js"><link rel="prefetch" href="/Doc/assets/js/78.6afbc5ab.js"><link rel="prefetch" href="/Doc/assets/js/79.570a3f7d.js"><link rel="prefetch" href="/Doc/assets/js/8.ebae2304.js"><link rel="prefetch" href="/Doc/assets/js/80.eb2b9bcb.js"><link rel="prefetch" href="/Doc/assets/js/81.2483faf4.js"><link rel="prefetch" href="/Doc/assets/js/82.1170a5d2.js"><link rel="prefetch" href="/Doc/assets/js/83.36776445.js"><link rel="prefetch" href="/Doc/assets/js/84.35189a6f.js"><link rel="prefetch" href="/Doc/assets/js/85.1f67cb7c.js"><link rel="prefetch" href="/Doc/assets/js/86.4ab10d4e.js"><link rel="prefetch" href="/Doc/assets/js/87.4c17d6f6.js"><link rel="prefetch" href="/Doc/assets/js/89.9578f894.js"><link rel="prefetch" href="/Doc/assets/js/9.b1ce05eb.js"><link rel="prefetch" href="/Doc/assets/js/90.3a3fcc25.js"><link rel="prefetch" href="/Doc/assets/js/91.4a263cec.js"><link rel="prefetch" href="/Doc/assets/js/92.a15168a9.js"><link rel="prefetch" href="/Doc/assets/js/93.f67ef2e1.js"><link rel="prefetch" href="/Doc/assets/js/94.28eac949.js"><link rel="prefetch" href="/Doc/assets/js/95.3016b7c1.js"><link rel="prefetch" href="/Doc/assets/js/96.aba3bc59.js"><link rel="prefetch" href="/Doc/assets/js/97.30a78601.js"><link rel="prefetch" href="/Doc/assets/js/98.f6776633.js"><link rel="prefetch" href="/Doc/assets/js/99.b27c6728.js">
+    <link rel="stylesheet" href="/Doc/assets/css/0.styles.1a8630d9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Doc/" class="home-link router-link-active"><!----> <span class="site-name">语法规则文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="css" class="dropdown-title"><span class="title">css</span> <span class="arrow down"></span></button> <button type="button" aria-label="css" class="mobile-dropdown-title"><span class="title">css</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Doc/css/Selectors/Selector.html" class="nav-link">
+  属性
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/Pretreatment/sass/variable.html" class="nav-link">
+  预处理
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="js" class="dropdown-title"><span class="title">js</span> <span class="arrow down"></span></button> <button type="button" aria-label="js" class="mobile-dropdown-title"><span class="title">js</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          参考
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/GlobalObjects/" class="nav-link">
+  内置对象
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/Statements/" class="nav-link">
+  语句
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/Operators/" class="nav-link">
+  表达式与运算符
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/TypeScript/" class="nav-link">
+  TypeScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          WebAPI(创作)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  Dom
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/WebAPI/Bom/" class="nav-link">
+  Bom
+</a></li></ul></li><li class="dropdown-item"><h4>
+          思维(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  算法
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  手撕原理
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  项目
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/vue/API/" class="nav-link">
+  API
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/vue/Router/" class="nav-link">
+  Router
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/vue/Vuex/" class="nav-link">
+  Vuex
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  React
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  Angular
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工程化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/vue/CLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/CLI/" class="nav-link router-link-active">
+  ReactCLI
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/CLI/Sequelize-CLI.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Sequelize
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Engineering/Dependency/npm.html" class="nav-link">
+  依赖管理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          专栏
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html" class="nav-link">
+  游览器
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据" class="dropdown-title"><span class="title">数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据" class="mobile-dropdown-title"><span class="title">数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Doc/db/MySql/mingling.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/db/Redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/db/MongoDB/" class="nav-link">
+  MongoDB
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端(待定)" class="dropdown-title"><span class="title">后端(待定)</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端(待定)" class="mobile-dropdown-title"><span class="title">后端(待定)</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          语言(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  node
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/962024051/Doc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="css" class="dropdown-title"><span class="title">css</span> <span class="arrow down"></span></button> <button type="button" aria-label="css" class="mobile-dropdown-title"><span class="title">css</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Doc/css/Selectors/Selector.html" class="nav-link">
+  属性
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/Pretreatment/sass/variable.html" class="nav-link">
+  预处理
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="js" class="dropdown-title"><span class="title">js</span> <span class="arrow down"></span></button> <button type="button" aria-label="js" class="mobile-dropdown-title"><span class="title">js</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          参考
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/GlobalObjects/" class="nav-link">
+  内置对象
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/Statements/" class="nav-link">
+  语句
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/Operators/" class="nav-link">
+  表达式与运算符
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/TypeScript/" class="nav-link">
+  TypeScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          WebAPI(创作)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  Dom
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/WebAPI/Bom/" class="nav-link">
+  Bom
+</a></li></ul></li><li class="dropdown-item"><h4>
+          思维(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  算法
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  手撕原理
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  项目
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/vue/API/" class="nav-link">
+  API
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/vue/Router/" class="nav-link">
+  Router
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/vue/Vuex/" class="nav-link">
+  Vuex
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  React
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  Angular
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工程化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/vue/CLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/CLI/" class="nav-link router-link-active">
+  ReactCLI
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/CLI/Sequelize-CLI.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Sequelize
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Engineering/Dependency/npm.html" class="nav-link">
+  依赖管理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          专栏
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html" class="nav-link">
+  游览器
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据" class="dropdown-title"><span class="title">数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据" class="mobile-dropdown-title"><span class="title">数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Doc/db/MySql/mingling.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/db/Redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/db/MongoDB/" class="nav-link">
+  MongoDB
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端(待定)" class="dropdown-title"><span class="title">后端(待定)</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端(待定)" class="mobile-dropdown-title"><span class="title">后端(待定)</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          语言(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  node
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/962024051/Doc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="sequelize-cli"><a href="#sequelize-cli" class="header-anchor">#</a> Sequelize-CLI</h1> <h2 id="依赖包"><a href="#依赖包" class="header-anchor">#</a> 依赖包</h2> <div class="language- extra-class"><pre class="language-text"><code>npm init egg
+npm i
+npm install --save egg-sequelize mysql2
+npm install --save-dev sequelize-cli
+</code></pre></div><h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <div class="language- extra-class"><pre class="language-text"><code>  config.sequelize = {
+    dialect: 'mysql', // 表示使用mysql
+    host: '127.0.0.1', // 连接的数据库主机地址
+    port: 3306, // mysql服务端口
+    database: 'egg_mysql_development', // 数据库名
+    username: 'root', // 数据库用户名
+    password: '123456', // 数据库密码
+    timezone: '+8:00', // 由于orm用的UTC时间，这里必须加上东八区，否则取出来的时间相差8小时
+    define: {  // model的全局配置
+      timestamps: false,   // 添加create,update,delete时间戳
+      freezeTableName: false,  // 防止修改表名为复数
+      underscored: false  // 防止驼峰式字段被默认转为下划线
+    },
+    dialectOptions: { // 让读取date类型数据时返回字符串而不是UTC时间
+      dateStrings: true,
+      typeCast(field, next) {
+        if(field.type === &quot;DATETIME&quot;){
+          return field.string();
+        }
+        return next();
+      }
+    }
+  };
+</code></pre></div><h2 id="命令"><a href="#命令" class="header-anchor">#</a> 命令</h2> <div class="language- extra-class"><pre class="language-text"><code>  sequelize init                              初始化项目
+  sequelize init:config                       初始化config
+  sequelize init:migrations                   初始化migrations
+  sequelize init:models                       初始化models
+  sequelize init:seeders                      初始化seeders
+
+  sequelize db:create                         创建数据库
+  sequelize db:drop                           删除数据库
+  
+  sequelize db:migrate                        运行挂起的迁移
+  sequelize db:migrate:schema:timestamps:add  
+  sequelize db:migrate:status                 列出所有迁移的状态
+  sequelize db:migrate:undo                   撤销上一次迁移
+  sequelize db:migrate:undo:all               撤销所有迁移 
+  sequelize db:migrate:undo --name xxx		  撤销指定迁移
+  
+  sequelize db:seed                           运行指定种子文件
+  sequelize db:seed:undo                      删除指定文件
+  sequelize db:seed:all                       运行所有种子文件
+  sequelize db:seed:undo:all                  删除所有指定文件
+  
+  sequelize migration:generate                生成一个新migrate文件[aliases: migration:create]
+  sequelize model:generate                    生成一个新model文件[aliases: model:create]
+  sequelize seed:generate                     生成一个新seed文件[aliases: seed:create]
+
+
+</code></pre></div><h2 id="数据类型"><a href="#数据类型" class="header-anchor">#</a> 数据类型</h2> <div class="language- extra-class"><pre class="language-text"><code>sequelize.STRING                      // VARCHAR(255)
+Sequelize.STRING(1234)                // VARCHAR(1234)
+Sequelize.STRING.BINARY               // VARCHAR BINARY
+Sequelize.TEXT                        // TEXT
+Sequelize.TEXT('tiny')                // TINYTEXT
+Sequelize.CITEXT                      // CITEXT      PostgreSQL and SQLite only.
+
+Sequelize.INTEGER                     // INTEGER
+Sequelize.BIGINT                      // BIGINT
+Sequelize.BIGINT(11)                  // BIGINT(11)
+
+Sequelize.FLOAT                       // FLOAT
+Sequelize.FLOAT(11)                   // FLOAT(11)
+Sequelize.FLOAT(11, 10)               // FLOAT(11,10)
+
+Sequelize.REAL                        // REAL        PostgreSQL only.
+Sequelize.REAL(11)                    // REAL(11)    PostgreSQL only.
+Sequelize.REAL(11, 12)                // REAL(11,12) PostgreSQL only.
+
+Sequelize.DOUBLE                      // DOUBLE
+Sequelize.DOUBLE(11)                  // DOUBLE(11)
+Sequelize.DOUBLE(11, 10)              // DOUBLE(11,10)
+
+Sequelize.DECIMAL                     // DECIMAL
+Sequelize.DECIMAL(10, 2)              // DECIMAL(10,2)
+
+Sequelize.DATE                        // DATETIME for mysql / sqlite, TIMESTAMP WITH TIME ZONE for postgres
+Sequelize.DATE(6)                     // DATETIME(6) for mysql 5.6.4+. Fractional seconds support with up to 6 digits of precision
+Sequelize.DATEONLY                    // DATE without time.
+Sequelize.BOOLEAN                     // TINYINT(1)
+
+Sequelize.ENUM('value 1', 'value 2')  // An ENUM with allowed values 'value 1' and 'value 2'
+Sequelize.ARRAY(Sequelize.TEXT)       // Defines an array. PostgreSQL only.
+Sequelize.ARRAY(Sequelize.ENUM)       // Defines an array of ENUM. PostgreSQL only.
+
+Sequelize.JSON                        // JSON column. PostgreSQL, SQLite and MySQL only.
+Sequelize.JSONB                       // JSONB column. PostgreSQL only.
+
+Sequelize.BLOB                        // BLOB (bytea for PostgreSQL)
+Sequelize.BLOB('tiny')                // TINYBLOB (bytea for PostgreSQL. Other options are medium and long)
+
+Sequelize.UUID                        // UUID datatype for PostgreSQL and SQLite, CHAR(36) BINARY for MySQL (use defaultValue: Sequelize.UUIDV1 or Sequelize.UUIDV4 to make sequelize generate the ids automatically)
+
+Sequelize.CIDR                        // CIDR datatype for PostgreSQL
+Sequelize.INET                        // INET datatype for PostgreSQL
+Sequelize.MACADDR                     // MACADDR datatype for PostgreSQL
+
+Sequelize.RANGE(Sequelize.INTEGER)    // Defines int4range range. PostgreSQL only.
+Sequelize.RANGE(Sequelize.BIGINT)     // Defined int8range range. PostgreSQL only.
+Sequelize.RANGE(Sequelize.DATE)       // Defines tstzrange range. PostgreSQL only.
+Sequelize.RANGE(Sequelize.DATEONLY)   // Defines daterange range. PostgreSQL only.
+Sequelize.RANGE(Sequelize.DECIMAL)    // Defines numrange range. PostgreSQL only.
+
+Sequelize.ARRAY(Sequelize.RANGE(Sequelize.DATE)) // Defines array of tstzrange ranges. PostgreSQL only.
+
+Sequelize.GEOMETRY                    // Spatial column.  PostgreSQL (with PostGIS) or MySQL only.
+Sequelize.GEOMETRY('POINT')           // Spatial column with geometry type. PostgreSQL (with PostGIS) or MySQL only.
+Sequelize.GEOMETRY('POINT', 4326)     // Spatial column with geometry type and SRID.  PostgreSQL (with PostGIS) or MySQL only.
+</code></pre></div><h2 id="字段属性"><a href="#字段属性" class="header-anchor">#</a> 字段属性</h2> <div class="language- extra-class"><pre class="language-text"><code>// 迁移文件 设计数据表的
+{
+	allowNull: false, // 是否允许为空
+	autoIncrement: true, // 字段是否是自增类型
+	primaryKey: true, // 字段是否是主键
+	type: Sequelize.INTEGER // 字段是整型
+    defaultValue: null, // 字段默认值
+    unique: true, // 唯一索引
+    autoIncrement: true, //整数列
+    field: 'field_with_underscores'，//自定义列名称
+    comment: '这是带有注释的列', //注释列
+    //外键列
+    references: {
+      // 这是对另一个模型的参考
+      model: Bar,
+
+      // 这是引用模型的列名
+      key: 'id',
+
+      // 使用 PostgreSQL,可以通过 Deferrable 类型声明何时检查外键约束.
+      deferrable: Deferrable.INITIALLY_IMMEDIATE
+      // 参数:
+      // - `Deferrable.INITIALLY_IMMEDIATE` - 立即检查外键约束
+      // - `Deferrable.INITIALLY_DEFERRED` - 将所有外键约束检查推迟到事务结束
+      // - `Deferrable.NOT` - 完全不推迟检查(默认) - 这将不允许你动态更改事务中的规则
+    }
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/Doc/assets/js/app.902b9bb4.js" defer></script><script src="/Doc/assets/js/2.ef0a363d.js" defer></script><script src="/Doc/assets/js/88.1051a51d.js" defer></script>
+  </body>
+</html>

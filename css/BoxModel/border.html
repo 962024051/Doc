@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>边框 | 语法规则文档</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?095b36cf1d99d72592fe316abe8bbbb2";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+        </script>
+    <meta name="description" content="个人程序员博客">
+    <meta name="keywords" content="it教程 语法 算法 设计 游览器 软件 http v8 JavaScript">
+    
+    <link rel="preload" href="/Doc/assets/css/0.styles.1a8630d9.css" as="style"><link rel="preload" href="/Doc/assets/js/app.902b9bb4.js" as="script"><link rel="preload" href="/Doc/assets/js/2.ef0a363d.js" as="script"><link rel="preload" href="/Doc/assets/js/26.e14fc7b9.js" as="script"><link rel="prefetch" href="/Doc/assets/js/10.bfe6afa3.js"><link rel="prefetch" href="/Doc/assets/js/100.e9ca59b4.js"><link rel="prefetch" href="/Doc/assets/js/101.350cd20f.js"><link rel="prefetch" href="/Doc/assets/js/102.2fa4848d.js"><link rel="prefetch" href="/Doc/assets/js/103.5fb219be.js"><link rel="prefetch" href="/Doc/assets/js/104.c8f406a4.js"><link rel="prefetch" href="/Doc/assets/js/105.a5cf4d82.js"><link rel="prefetch" href="/Doc/assets/js/106.26c15bbe.js"><link rel="prefetch" href="/Doc/assets/js/107.3b58e53b.js"><link rel="prefetch" href="/Doc/assets/js/108.701eed5f.js"><link rel="prefetch" href="/Doc/assets/js/109.73c4bd21.js"><link rel="prefetch" href="/Doc/assets/js/11.7a873ab3.js"><link rel="prefetch" href="/Doc/assets/js/110.4c23333e.js"><link rel="prefetch" href="/Doc/assets/js/111.6c703e6b.js"><link rel="prefetch" href="/Doc/assets/js/112.0a0f1811.js"><link rel="prefetch" href="/Doc/assets/js/113.4ca59157.js"><link rel="prefetch" href="/Doc/assets/js/114.4c45fa82.js"><link rel="prefetch" href="/Doc/assets/js/115.b54cb9e8.js"><link rel="prefetch" href="/Doc/assets/js/116.0a9f1718.js"><link rel="prefetch" href="/Doc/assets/js/117.0333d307.js"><link rel="prefetch" href="/Doc/assets/js/118.15810dc0.js"><link rel="prefetch" href="/Doc/assets/js/119.fb6bd50e.js"><link rel="prefetch" href="/Doc/assets/js/12.0310e52c.js"><link rel="prefetch" href="/Doc/assets/js/120.0d8912ce.js"><link rel="prefetch" href="/Doc/assets/js/121.1386ef9e.js"><link rel="prefetch" href="/Doc/assets/js/122.3b067808.js"><link rel="prefetch" href="/Doc/assets/js/123.5b03d87b.js"><link rel="prefetch" href="/Doc/assets/js/124.e0c0407d.js"><link rel="prefetch" href="/Doc/assets/js/125.3e7a53ae.js"><link rel="prefetch" href="/Doc/assets/js/126.95285aba.js"><link rel="prefetch" href="/Doc/assets/js/127.13293cc6.js"><link rel="prefetch" href="/Doc/assets/js/128.dba5bf2b.js"><link rel="prefetch" href="/Doc/assets/js/129.25ad6778.js"><link rel="prefetch" href="/Doc/assets/js/13.1ea9025d.js"><link rel="prefetch" href="/Doc/assets/js/130.333fabc8.js"><link rel="prefetch" href="/Doc/assets/js/131.9ee9c4d4.js"><link rel="prefetch" href="/Doc/assets/js/132.26dd28fb.js"><link rel="prefetch" href="/Doc/assets/js/133.72fe1499.js"><link rel="prefetch" href="/Doc/assets/js/134.581dfa04.js"><link rel="prefetch" href="/Doc/assets/js/135.e597f508.js"><link rel="prefetch" href="/Doc/assets/js/136.4e47ab6f.js"><link rel="prefetch" href="/Doc/assets/js/137.47023e2c.js"><link rel="prefetch" href="/Doc/assets/js/138.088bbc2c.js"><link rel="prefetch" href="/Doc/assets/js/139.c499414e.js"><link rel="prefetch" href="/Doc/assets/js/14.c7b4d29a.js"><link rel="prefetch" href="/Doc/assets/js/140.8f0391ef.js"><link rel="prefetch" href="/Doc/assets/js/141.cd869971.js"><link rel="prefetch" href="/Doc/assets/js/142.fb16fba9.js"><link rel="prefetch" href="/Doc/assets/js/143.c8152fca.js"><link rel="prefetch" href="/Doc/assets/js/144.be9e4201.js"><link rel="prefetch" href="/Doc/assets/js/145.7a714d15.js"><link rel="prefetch" href="/Doc/assets/js/146.6ba66980.js"><link rel="prefetch" href="/Doc/assets/js/147.57a2928a.js"><link rel="prefetch" href="/Doc/assets/js/148.9e971576.js"><link rel="prefetch" href="/Doc/assets/js/149.4f248cdc.js"><link rel="prefetch" href="/Doc/assets/js/15.05bd0385.js"><link rel="prefetch" href="/Doc/assets/js/150.0c757b5b.js"><link rel="prefetch" href="/Doc/assets/js/151.9994308b.js"><link rel="prefetch" href="/Doc/assets/js/152.6ad248d4.js"><link rel="prefetch" href="/Doc/assets/js/153.892dad93.js"><link rel="prefetch" href="/Doc/assets/js/154.41b98c54.js"><link rel="prefetch" href="/Doc/assets/js/155.26c67a5c.js"><link rel="prefetch" href="/Doc/assets/js/156.0d3ec8c6.js"><link rel="prefetch" href="/Doc/assets/js/157.b65ea00d.js"><link rel="prefetch" href="/Doc/assets/js/158.699d75aa.js"><link rel="prefetch" href="/Doc/assets/js/159.3a37359f.js"><link rel="prefetch" href="/Doc/assets/js/16.f9780864.js"><link rel="prefetch" href="/Doc/assets/js/160.3da88b09.js"><link rel="prefetch" href="/Doc/assets/js/161.2c6b66e6.js"><link rel="prefetch" href="/Doc/assets/js/162.6dbc37b9.js"><link rel="prefetch" href="/Doc/assets/js/163.593ce4e6.js"><link rel="prefetch" href="/Doc/assets/js/164.b9e67673.js"><link rel="prefetch" href="/Doc/assets/js/165.b84f179f.js"><link rel="prefetch" href="/Doc/assets/js/166.e8668636.js"><link rel="prefetch" href="/Doc/assets/js/167.3a5629c2.js"><link rel="prefetch" href="/Doc/assets/js/168.33878e6f.js"><link rel="prefetch" href="/Doc/assets/js/169.a4504567.js"><link rel="prefetch" href="/Doc/assets/js/17.c31c77a9.js"><link rel="prefetch" href="/Doc/assets/js/170.856970c7.js"><link rel="prefetch" href="/Doc/assets/js/171.28cfe480.js"><link rel="prefetch" href="/Doc/assets/js/172.f9cfa133.js"><link rel="prefetch" href="/Doc/assets/js/173.a892767c.js"><link rel="prefetch" href="/Doc/assets/js/174.2b94ba53.js"><link rel="prefetch" href="/Doc/assets/js/175.c147e1c4.js"><link rel="prefetch" href="/Doc/assets/js/176.ccfcf1f3.js"><link rel="prefetch" href="/Doc/assets/js/177.3135c930.js"><link rel="prefetch" href="/Doc/assets/js/178.fdd3aa9b.js"><link rel="prefetch" href="/Doc/assets/js/179.4c53d695.js"><link rel="prefetch" href="/Doc/assets/js/18.5aea91fc.js"><link rel="prefetch" href="/Doc/assets/js/180.80b88bac.js"><link rel="prefetch" href="/Doc/assets/js/181.c4ea4a54.js"><link rel="prefetch" href="/Doc/assets/js/182.1c41e0c8.js"><link rel="prefetch" href="/Doc/assets/js/183.0e7aa89c.js"><link rel="prefetch" href="/Doc/assets/js/184.ddb49815.js"><link rel="prefetch" href="/Doc/assets/js/185.43d46113.js"><link rel="prefetch" href="/Doc/assets/js/186.82d42bbb.js"><link rel="prefetch" href="/Doc/assets/js/187.798b8a87.js"><link rel="prefetch" href="/Doc/assets/js/188.9790c3f6.js"><link rel="prefetch" href="/Doc/assets/js/189.f18287c5.js"><link rel="prefetch" href="/Doc/assets/js/19.6d5427d3.js"><link rel="prefetch" href="/Doc/assets/js/190.bb521583.js"><link rel="prefetch" href="/Doc/assets/js/191.c1df15fe.js"><link rel="prefetch" href="/Doc/assets/js/192.8ae7fc57.js"><link rel="prefetch" href="/Doc/assets/js/193.a8ffb714.js"><link rel="prefetch" href="/Doc/assets/js/194.4ea6e979.js"><link rel="prefetch" href="/Doc/assets/js/195.661928cf.js"><link rel="prefetch" href="/Doc/assets/js/196.2871d148.js"><link rel="prefetch" href="/Doc/assets/js/197.a0fbbc31.js"><link rel="prefetch" href="/Doc/assets/js/198.8a6086cf.js"><link rel="prefetch" href="/Doc/assets/js/199.7c5a4941.js"><link rel="prefetch" href="/Doc/assets/js/20.21cbeb2c.js"><link rel="prefetch" href="/Doc/assets/js/200.1d71cca8.js"><link rel="prefetch" href="/Doc/assets/js/201.e0d7f426.js"><link rel="prefetch" href="/Doc/assets/js/202.cdbd7fa8.js"><link rel="prefetch" href="/Doc/assets/js/203.912f6eea.js"><link rel="prefetch" href="/Doc/assets/js/204.3056439f.js"><link rel="prefetch" href="/Doc/assets/js/205.5c3b6d2b.js"><link rel="prefetch" href="/Doc/assets/js/21.9240dd91.js"><link rel="prefetch" href="/Doc/assets/js/22.1f345886.js"><link rel="prefetch" href="/Doc/assets/js/23.1c444557.js"><link rel="prefetch" href="/Doc/assets/js/24.71752224.js"><link rel="prefetch" href="/Doc/assets/js/25.e4c40493.js"><link rel="prefetch" href="/Doc/assets/js/27.58dc8d5a.js"><link rel="prefetch" href="/Doc/assets/js/28.a28fd450.js"><link rel="prefetch" href="/Doc/assets/js/29.fa0f7af7.js"><link rel="prefetch" href="/Doc/assets/js/3.6b10a4e1.js"><link rel="prefetch" href="/Doc/assets/js/30.4c3f2713.js"><link rel="prefetch" href="/Doc/assets/js/31.7ba3335c.js"><link rel="prefetch" href="/Doc/assets/js/32.6b88210a.js"><link rel="prefetch" href="/Doc/assets/js/33.c99cb034.js"><link rel="prefetch" href="/Doc/assets/js/34.09cff75c.js"><link rel="prefetch" href="/Doc/assets/js/35.4a58c974.js"><link rel="prefetch" href="/Doc/assets/js/36.5c953857.js"><link rel="prefetch" href="/Doc/assets/js/37.1671a7ad.js"><link rel="prefetch" href="/Doc/assets/js/38.380133a3.js"><link rel="prefetch" href="/Doc/assets/js/39.2a488ded.js"><link rel="prefetch" href="/Doc/assets/js/4.ede3f828.js"><link rel="prefetch" href="/Doc/assets/js/40.cd7ef327.js"><link rel="prefetch" href="/Doc/assets/js/41.fe807f24.js"><link rel="prefetch" href="/Doc/assets/js/42.27a40b2f.js"><link rel="prefetch" href="/Doc/assets/js/43.e43f9d47.js"><link rel="prefetch" href="/Doc/assets/js/44.7163648d.js"><link rel="prefetch" href="/Doc/assets/js/45.cdf2f6e4.js"><link rel="prefetch" href="/Doc/assets/js/46.a59fbcbb.js"><link rel="prefetch" href="/Doc/assets/js/47.1791198b.js"><link rel="prefetch" href="/Doc/assets/js/48.30028b36.js"><link rel="prefetch" href="/Doc/assets/js/49.b1c8b036.js"><link rel="prefetch" href="/Doc/assets/js/5.1ced6b4d.js"><link rel="prefetch" href="/Doc/assets/js/50.3af400d8.js"><link rel="prefetch" href="/Doc/assets/js/51.479c455f.js"><link rel="prefetch" href="/Doc/assets/js/52.f6ba9656.js"><link rel="prefetch" href="/Doc/assets/js/53.75707613.js"><link rel="prefetch" href="/Doc/assets/js/54.e6ee4d56.js"><link rel="prefetch" href="/Doc/assets/js/55.cc09373a.js"><link rel="prefetch" href="/Doc/assets/js/56.ec5aa133.js"><link rel="prefetch" href="/Doc/assets/js/57.7c675995.js"><link rel="prefetch" href="/Doc/assets/js/58.232fb460.js"><link rel="prefetch" href="/Doc/assets/js/59.e7b2c02e.js"><link rel="prefetch" href="/Doc/assets/js/6.6179bc64.js"><link rel="prefetch" href="/Doc/assets/js/60.3a7ec6ee.js"><link rel="prefetch" href="/Doc/assets/js/61.c2e5ee30.js"><link rel="prefetch" href="/Doc/assets/js/62.917a57dc.js"><link rel="prefetch" href="/Doc/assets/js/63.f0f970d0.js"><link rel="prefetch" href="/Doc/assets/js/64.760669a7.js"><link rel="prefetch" href="/Doc/assets/js/65.598b113c.js"><link rel="prefetch" href="/Doc/assets/js/66.7eea90e5.js"><link rel="prefetch" href="/Doc/assets/js/67.98d79278.js"><link rel="prefetch" href="/Doc/assets/js/68.cafd5bb4.js"><link rel="prefetch" href="/Doc/assets/js/69.2ee8ebe5.js"><link rel="prefetch" href="/Doc/assets/js/7.50f6511d.js"><link rel="prefetch" href="/Doc/assets/js/70.952c63c9.js"><link rel="prefetch" href="/Doc/assets/js/71.63bcbbaf.js"><link rel="prefetch" href="/Doc/assets/js/72.94a7e949.js"><link rel="prefetch" href="/Doc/assets/js/73.3188d0f2.js"><link rel="prefetch" href="/Doc/assets/js/74.0249309e.js"><link rel="prefetch" href="/Doc/assets/js/75.339b50b9.js"><link rel="prefetch" href="/Doc/assets/js/76.c80850da.js"><link rel="prefetch" href="/Doc/assets/js/77.637f0447.js"><link rel="prefetch" href="/Doc/assets/js/78.6afbc5ab.js"><link rel="prefetch" href="/Doc/assets/js/79.570a3f7d.js"><link rel="prefetch" href="/Doc/assets/js/8.ebae2304.js"><link rel="prefetch" href="/Doc/assets/js/80.eb2b9bcb.js"><link rel="prefetch" href="/Doc/assets/js/81.2483faf4.js"><link rel="prefetch" href="/Doc/assets/js/82.1170a5d2.js"><link rel="prefetch" href="/Doc/assets/js/83.36776445.js"><link rel="prefetch" href="/Doc/assets/js/84.35189a6f.js"><link rel="prefetch" href="/Doc/assets/js/85.1f67cb7c.js"><link rel="prefetch" href="/Doc/assets/js/86.4ab10d4e.js"><link rel="prefetch" href="/Doc/assets/js/87.4c17d6f6.js"><link rel="prefetch" href="/Doc/assets/js/88.1051a51d.js"><link rel="prefetch" href="/Doc/assets/js/89.9578f894.js"><link rel="prefetch" href="/Doc/assets/js/9.b1ce05eb.js"><link rel="prefetch" href="/Doc/assets/js/90.3a3fcc25.js"><link rel="prefetch" href="/Doc/assets/js/91.4a263cec.js"><link rel="prefetch" href="/Doc/assets/js/92.a15168a9.js"><link rel="prefetch" href="/Doc/assets/js/93.f67ef2e1.js"><link rel="prefetch" href="/Doc/assets/js/94.28eac949.js"><link rel="prefetch" href="/Doc/assets/js/95.3016b7c1.js"><link rel="prefetch" href="/Doc/assets/js/96.aba3bc59.js"><link rel="prefetch" href="/Doc/assets/js/97.30a78601.js"><link rel="prefetch" href="/Doc/assets/js/98.f6776633.js"><link rel="prefetch" href="/Doc/assets/js/99.b27c6728.js">
+    <link rel="stylesheet" href="/Doc/assets/css/0.styles.1a8630d9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Doc/" class="home-link router-link-active"><!----> <span class="site-name">语法规则文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="css" class="dropdown-title"><span class="title">css</span> <span class="arrow down"></span></button> <button type="button" aria-label="css" class="mobile-dropdown-title"><span class="title">css</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Doc/css/Selectors/Selector.html" class="nav-link">
+  属性
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/Pretreatment/sass/variable.html" class="nav-link">
+  预处理
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="js" class="dropdown-title"><span class="title">js</span> <span class="arrow down"></span></button> <button type="button" aria-label="js" class="mobile-dropdown-title"><span class="title">js</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          参考
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/GlobalObjects/" class="nav-link">
+  内置对象
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/Statements/" class="nav-link">
+  语句
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/Operators/" class="nav-link">
+  表达式与运算符
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/TypeScript/" class="nav-link">
+  TypeScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          WebAPI(创作)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  Dom
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/WebAPI/Bom/" class="nav-link">
+  Bom
+</a></li></ul></li><li class="dropdown-item"><h4>
+          思维(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  算法
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  手撕原理
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  项目
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/vue/API/" class="nav-link">
+  API
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/vue/Router/" class="nav-link">
+  Router
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/vue/Vuex/" class="nav-link">
+  Vuex
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  React
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  Angular
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工程化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/vue/CLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/CLI/" class="nav-link">
+  ReactCLI
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/CLI/Sequelize-CLI.html" class="nav-link">
+  Sequelize
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Engineering/Dependency/npm.html" class="nav-link">
+  依赖管理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          专栏
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html" class="nav-link">
+  游览器
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据" class="dropdown-title"><span class="title">数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据" class="mobile-dropdown-title"><span class="title">数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Doc/db/MySql/mingling.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/db/Redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/db/MongoDB/" class="nav-link">
+  MongoDB
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端(待定)" class="dropdown-title"><span class="title">后端(待定)</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端(待定)" class="mobile-dropdown-title"><span class="title">后端(待定)</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          语言(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  node
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/962024051/Doc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="css" class="dropdown-title"><span class="title">css</span> <span class="arrow down"></span></button> <button type="button" aria-label="css" class="mobile-dropdown-title"><span class="title">css</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Doc/css/Selectors/Selector.html" class="nav-link">
+  属性
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/Pretreatment/sass/variable.html" class="nav-link">
+  预处理
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="js" class="dropdown-title"><span class="title">js</span> <span class="arrow down"></span></button> <button type="button" aria-label="js" class="mobile-dropdown-title"><span class="title">js</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          参考
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/GlobalObjects/" class="nav-link">
+  内置对象
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/Statements/" class="nav-link">
+  语句
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/Operators/" class="nav-link">
+  表达式与运算符
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/TypeScript/" class="nav-link">
+  TypeScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          WebAPI(创作)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  Dom
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/WebAPI/Bom/" class="nav-link">
+  Bom
+</a></li></ul></li><li class="dropdown-item"><h4>
+          思维(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  算法
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  手撕原理
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  项目
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/vue/API/" class="nav-link">
+  API
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/vue/Router/" class="nav-link">
+  Router
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/vue/Vuex/" class="nav-link">
+  Vuex
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  React
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  Angular
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工程化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/vue/CLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/CLI/" class="nav-link">
+  ReactCLI
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/CLI/Sequelize-CLI.html" class="nav-link">
+  Sequelize
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Engineering/Dependency/npm.html" class="nav-link">
+  依赖管理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          专栏
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html" class="nav-link">
+  游览器
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据" class="dropdown-title"><span class="title">数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据" class="mobile-dropdown-title"><span class="title">数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Doc/db/MySql/mingling.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/db/Redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/db/MongoDB/" class="nav-link">
+  MongoDB
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端(待定)" class="dropdown-title"><span class="title">后端(待定)</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端(待定)" class="mobile-dropdown-title"><span class="title">后端(待定)</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          语言(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  node
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/962024051/Doc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Doc/css/Selectors/Selector.html" class="sidebar-link">选择器</a></li><li><a href="/Doc/css/ElementWeight.html" class="sidebar-link">元素权重</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/Doc/css/Types/Length" class="sidebar-heading clickable"><span>数据类型</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/Doc/css/Functions/expression" class="sidebar-heading clickable"><span>函数</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/Doc/css/CssRule/font-face" class="sidebar-heading clickable"><span>规则</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/Doc/css/Text/font" class="sidebar-heading clickable"><span>文本控制</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/Doc/css/BoxModel/BoxSize" class="sidebar-heading clickable open"><span>盒模型</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/Doc/css/BoxModel/BoxSize.html" class="sidebar-link">盒大小属性</a></li><li><a href="/Doc/css/BoxModel/Box.html" class="sidebar-link">边距</a></li><li><a href="/Doc/css/BoxModel/border.html" aria-current="page" class="active sidebar-link">边框</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#边框规则属性" class="sidebar-link">边框规则属性</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#颜色" class="sidebar-link">颜色</a></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#宽度" class="sidebar-link">宽度</a></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#样式" class="sidebar-link">样式</a></li></ul></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#边框方向" class="sidebar-link">边框方向</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#方向位置" class="sidebar-link">方向位置</a></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#简写属性-4" class="sidebar-link">简写属性</a></li></ul></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#边框圆角" class="sidebar-link">边框圆角</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#左下角圆角" class="sidebar-link">左下角圆角</a></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#右下角圆角" class="sidebar-link">右下角圆角</a></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#左上角圆角" class="sidebar-link">左上角圆角</a></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#右上角圆角" class="sidebar-link">右上角圆角</a></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#简写属性-5" class="sidebar-link">简写属性</a></li></ul></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#边框图像" class="sidebar-link">边框图像</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#边框图像超出" class="sidebar-link">边框图像超出</a></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#边框图像平铺" class="sidebar-link">边框图像平铺</a></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#边框图像切片" class="sidebar-link">边框图像切片</a></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#边框图像来源" class="sidebar-link">边框图像来源</a></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#边框图像宽度" class="sidebar-link">边框图像宽度</a></li><li class="sidebar-sub-header"><a href="/Doc/css/BoxModel/border.html#简写属性-6" class="sidebar-link">简写属性</a></li></ul></li></ul></li><li><a href="/Doc/css/BoxModel/background.html" class="sidebar-link">背景属性</a></li><li><a href="/Doc/css/BoxModel/TableBorder.html" class="sidebar-link">表格或边框</a></li><li><a href="/Doc/css/BoxModel/BoxOverflow.html" class="sidebar-link">盒子溢出</a></li><li><a href="/Doc/css/BoxModel/LogicalProperties.html" class="sidebar-link">逻辑属性与值</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/Doc/css/Layout/Display" class="sidebar-heading clickable"><span>布局</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/Doc/css/Dat/Transforms" class="sidebar-heading clickable"><span>变形动画过渡</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/Doc/css/OtherAttributes/scroll" class="sidebar-heading clickable"><span>其他相关属性</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="边框"><a href="#边框" class="header-anchor">#</a> 边框</h1> <h2 id="边框规则属性"><a href="#边框规则属性" class="header-anchor">#</a> 边框规则属性</h2> <h3 id="颜色"><a href="#颜色" class="header-anchor">#</a> 颜色</h3> <h4 id="位置"><a href="#位置" class="header-anchor">#</a> 位置</h4> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 上 */</span>
+border-top-color ：&lt;color&gt;
+<span class="token comment">/* 右 */</span>
+border-right-color ：&lt;color&gt;
+<span class="token comment">/* 下 */</span>
+border-bottom-color ：&lt;color&gt;
+<span class="token comment">/* 左 */</span>
+border-left-color ：&lt;color&gt;
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;color&gt;</td> <td>颜色值 数据类型</td></tr></tbody></table> <h4 id="简写属性"><a href="#简写属性" class="header-anchor">#</a> 简写属性</h4> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">border-color：&lt;color&gt;</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>4<span class="token punctuation">}</span>
+
+<span class="token comment">/* &lt;color&gt; 值 */</span>
+<span class="token property">border-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+
+<span class="token comment">/* 水平 | 垂直 */</span>
+<span class="token property">border-color</span><span class="token punctuation">:</span> red #f015ca<span class="token punctuation">;</span>
+
+<span class="token comment">/* 上 | 垂直 | 下 */</span>
+<span class="token property">border-color</span><span class="token punctuation">:</span> red <span class="token function">rgb</span><span class="token punctuation">(</span>240<span class="token punctuation">,</span>30<span class="token punctuation">,</span>50<span class="token punctuation">,</span>.7<span class="token punctuation">)</span> green<span class="token punctuation">;</span>
+
+<span class="token comment">/* 上 | 右 | 下 | 左 */</span>
+<span class="token property">border-color</span><span class="token punctuation">:</span> red yellow green blue<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;color&gt;</td> <td>颜色值 数据类型 边框颜色</td></tr></tbody></table> <h3 id="宽度"><a href="#宽度" class="header-anchor">#</a> 宽度</h3> <h4 id="位置-2"><a href="#位置-2" class="header-anchor">#</a> 位置</h4> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 上 */</span>
+border-top-width ：&lt;length&gt; | thin | medium | thick
+<span class="token comment">/* 右 */</span>
+border-right-width ：&lt;length&gt; | thin | medium | thick
+<span class="token comment">/* 下 */</span>
+border-bottom-width ：&lt;length&gt; | thin | medium | thick
+<span class="token comment">/* 左 */</span>
+border-left-width ：&lt;length&gt; | thin | medium | thick
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;length&gt;</td> <td>长度值 数据类型 设置宽度</td></tr> <tr><td>thin</td> <td>细线</td></tr> <tr><td>medium</td> <td>中线</td></tr> <tr><td>thick</td> <td>粗线</td></tr></tbody></table> <h4 id="简写属性-2"><a href="#简写属性-2" class="header-anchor">#</a> 简写属性</h4> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">border-width：&lt;line-width&gt;</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>4<span class="token punctuation">}</span>
+where
+&lt;line-width&gt; = &lt;length&gt; | thin | medium | thick
+
+<span class="token comment">/* 单值 */</span>
+<span class="token property">border-width</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+<span class="token comment">/* 水平 | 垂直 */</span>
+<span class="token property">border-width</span><span class="token punctuation">:</span> 2px 1.5em<span class="token punctuation">;</span>
+<span class="token comment">/* 上 | 垂直 | 下 */</span>
+<span class="token property">border-width</span><span class="token punctuation">:</span> 1px 2em 1.5cm<span class="token punctuation">;</span>
+<span class="token comment">/* 上 | 右 | 下 | 左 */</span>
+<span class="token property">border-width</span><span class="token punctuation">:</span> 1px 2em 0 4rem<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;length&gt;</td> <td>长度值 数据类型 设置宽度</td></tr> <tr><td>thin</td> <td>细线</td></tr> <tr><td>medium</td> <td>中线</td></tr> <tr><td>thick</td> <td>粗线</td></tr></tbody></table> <h3 id="样式"><a href="#样式" class="header-anchor">#</a> 样式</h3> <h4 id="位置-3"><a href="#位置-3" class="header-anchor">#</a> 位置</h4> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 上 */</span>
+border-top-style ：&lt;line-style&gt;
+<span class="token comment">/* 右 */</span>
+border-right-style ：&lt;line-style&gt;
+<span class="token comment">/* 下 */</span>
+border-bottom-style ：&lt;line-style&gt;
+<span class="token comment">/* 左 */</span>
+border-left-style ：&lt;line-style&gt;
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;line-style&gt;</td> <td>边框样式</td></tr></tbody></table> <h4 id="简写属性-3"><a href="#简写属性-3" class="header-anchor">#</a> 简写属性</h4> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">border-style：&lt;line-style&gt;</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>4<span class="token punctuation">}</span>
+where
+&lt;line-style&gt; = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset
+
+<span class="token comment">/* 单值 */</span>
+<span class="token property">border-style</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token comment">/* 水平 | 垂直 */</span>
+<span class="token property">border-style</span><span class="token punctuation">:</span> dotted solid<span class="token punctuation">;</span>
+<span class="token comment">/* 上 | 垂直 | 下 */</span>
+<span class="token property">border-style</span><span class="token punctuation">:</span> hidden double dashed<span class="token punctuation">;</span>
+<span class="token comment">/* 上 | 右 | 下 | 左 */</span>
+<span class="token property">border-style</span><span class="token punctuation">:</span> none solid dotted dashed<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>none</td> <td>像 hidden 关键字一样，不显示边框</td></tr> <tr><td>hidden</td> <td>像 none 关键字一样，不显示边框，有隐藏效果</td></tr> <tr><td>dotted</td> <td>圆点</td></tr> <tr><td>dashed</td> <td>虚线</td></tr> <tr><td>solid</td> <td>实线</td></tr> <tr><td>double</td> <td>双实线</td></tr> <tr><td>groove</td> <td>雕刻效果的边框，样式与 <code>ridge</code> 相反</td></tr> <tr><td>ridge</td> <td>浮雕效果的边框，样式与 <code>groove</code> 相反</td></tr> <tr><td>inset</td> <td>陷入效果的边框，样式与 <code>outset</code> 相反</td></tr> <tr><td>outset</td> <td>突出效果的边框，样式与 <code>inset</code> 相反</td></tr></tbody></table> <h2 id="边框方向"><a href="#边框方向" class="header-anchor">#</a> 边框方向</h2> <h3 id="方向位置"><a href="#方向位置" class="header-anchor">#</a> 方向位置</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 上 */</span>
+border-top ：&lt;line-width&gt; || &lt;line-style&gt; || &lt;color&gt;
+<span class="token comment">/* 右 */</span>
+border-right ：&lt;line-width&gt; || &lt;line-style&gt; || &lt;color&gt;
+<span class="token comment">/* 下 */</span>
+border-bottom ：&lt;line-width&gt; || &lt;line-style&gt; || &lt;color&gt;
+<span class="token comment">/* 左 */</span>
+border-left ：&lt;line-width&gt; || &lt;line-style&gt; || &lt;color&gt;
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;line-width&gt;</td> <td>边框宽度</td></tr> <tr><td>&lt;line-style&gt;</td> <td>边框样式</td></tr> <tr><td>&lt;color&gt;</td> <td>边框颜色</td></tr></tbody></table> <h3 id="简写属性-4"><a href="#简写属性-4" class="header-anchor">#</a> 简写属性</h3> <div class="language-css extra-class"><pre class="language-css"><code>border：&lt;line-width&gt; || &lt;line-style&gt; || &lt;color&gt;
+
+<span class="token comment">/* 样式 */</span>
+<span class="token property">border</span><span class="token punctuation">:</span> solid<span class="token punctuation">;</span>
+
+<span class="token comment">/* 宽度 | 样式 */</span>
+<span class="token property">border</span><span class="token punctuation">:</span> 2px dotted<span class="token punctuation">;</span>
+
+<span class="token comment">/* 样式 | 颜色 */</span>
+<span class="token property">border</span><span class="token punctuation">:</span> outset #f33<span class="token punctuation">;</span>
+
+<span class="token comment">/* 宽度 | 样式 | 颜色 */</span>
+<span class="token property">border</span><span class="token punctuation">:</span> medium dashed green<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;line-width&gt;</td> <td>边框宽度</td></tr> <tr><td>&lt;line-style&gt;</td> <td>边框样式</td></tr> <tr><td>&lt;color&gt;</td> <td>边框颜色</td></tr></tbody></table> <h2 id="边框圆角"><a href="#边框圆角" class="header-anchor">#</a> 边框圆角</h2> <h3 id="左下角圆角"><a href="#左下角圆角" class="header-anchor">#</a> 左下角圆角</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">border-bottom-left-radius ： &lt;length-percentage&gt;</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>2<span class="token punctuation">}</span>
+where
+&lt;length-percentage&gt; = &lt;length&gt; | &lt;percentage&gt;
+
+<span class="token comment">/* 角边界的圆的半径*/</span>
+<span class="token comment">/* 单值 */</span>
+<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 20%<span class="token punctuation">;</span>
+
+<span class="token comment">/*双值 水平方向和垂直方向 */</span>
+<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 20% 20%<span class="token punctuation">;</span>
+<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 20% 10%<span class="token punctuation">;</span>
+<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> 0.5em 1em<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;length&gt;</td> <td>长度值数据类型 圆角</td></tr> <tr><td>&lt;percentage&gt;</td> <td>百分比数据类型 圆角</td></tr></tbody></table> <h3 id="右下角圆角"><a href="#右下角圆角" class="header-anchor">#</a> 右下角圆角</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">border-bottom-right-radius ： &lt;length-percentage&gt;</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>2<span class="token punctuation">}</span>
+where
+&lt;length-percentage&gt; = &lt;length&gt; | &lt;percentage&gt;
+
+<span class="token comment">/* 角边界的圆的半径*/</span>
+<span class="token comment">/* 单值 */</span>
+<span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+<span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> 20%<span class="token punctuation">;</span>
+
+<span class="token comment">/*双值 水平方向和垂直方向 */</span>
+<span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> 20% 20%<span class="token punctuation">;</span>
+<span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> 20% 10%<span class="token punctuation">;</span>
+<span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> 0.5em 1em<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;length&gt;</td> <td>长度值数据类型 圆角</td></tr> <tr><td>&lt;percentage&gt;</td> <td>百分比数据类型 圆角</td></tr></tbody></table> <h3 id="左上角圆角"><a href="#左上角圆角" class="header-anchor">#</a> 左上角圆角</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">border-top-left-radius ： &lt;length-percentage&gt;</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>2<span class="token punctuation">}</span>
+where
+&lt;length-percentage&gt; = &lt;length&gt; | &lt;percentage&gt;
+
+<span class="token comment">/* 角边界的圆的半径*/</span>
+<span class="token comment">/* 单值 */</span>
+<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 20%<span class="token punctuation">;</span>
+
+<span class="token comment">/*双值 水平方向和垂直方向 */</span>
+<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 20% 20%<span class="token punctuation">;</span>
+<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 20% 10%<span class="token punctuation">;</span>
+<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 0.5em 1em<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;length&gt;</td> <td>长度值数据类型 圆角</td></tr> <tr><td>&lt;percentage&gt;</td> <td>百分比数据类型 圆角</td></tr></tbody></table> <h3 id="右上角圆角"><a href="#右上角圆角" class="header-anchor">#</a> 右上角圆角</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">border-top-right-radius ： &lt;length-percentage&gt;</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>2<span class="token punctuation">}</span>
+where
+&lt;length-percentage&gt; = &lt;length&gt; | &lt;percentage&gt;
+
+<span class="token comment">/* 角边界的圆的半径*/</span>
+<span class="token comment">/* 单值 */</span>
+<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 20%<span class="token punctuation">;</span>
+
+<span class="token comment">/*双值 水平方向和垂直方向 */</span>
+<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 20% 20%<span class="token punctuation">;</span>
+<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 20% 10%<span class="token punctuation">;</span>
+<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 0.5em 1em<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;length&gt;</td> <td>长度值数据类型 圆角</td></tr> <tr><td>&lt;percentage&gt;</td> <td>百分比数据类型 圆角</td></tr></tbody></table> <h3 id="简写属性-5"><a href="#简写属性-5" class="header-anchor">#</a> 简写属性</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">border-radius ： &lt;length-percentage&gt;</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>4<span class="token punctuation">}</span> <span class="token selector">[ / &lt;length-percentage&gt;</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>4<span class="token punctuation">}</span> ]?
+where
+&lt;length-percentage&gt; = &lt;length&gt; | &lt;percentage&gt;
+
+<span class="token comment">/* 单值 */</span>
+<span class="token comment">/* 4个角设置半径 */</span>
+<span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+
+<span class="token comment">/* top-left和bottom-right | top-right和bottom-left */</span>
+<span class="token property">border-radius</span><span class="token punctuation">:</span> 10px 5%<span class="token punctuation">;</span>
+
+<span class="token comment">/* top-left | top-right 和 bottom-left | bottom-right */</span>
+<span class="token property">border-radius</span><span class="token punctuation">:</span> 2px 4px 2px<span class="token punctuation">;</span>
+
+<span class="token comment">/* top-left | top-right | bottom-right | bottom-left */</span>
+<span class="token property">border-radius</span><span class="token punctuation">:</span> 1px 0 3px 4px<span class="token punctuation">;</span>
+
+<span class="token comment">/* 水平/垂直 */</span>
+<span class="token property">border-radius</span><span class="token punctuation">:</span> 10px / 20px<span class="token punctuation">;</span>
+
+<span class="token comment">/* 水平 top-left和bottom-right | top-right和bottom-left
+   /垂直 top-left-and-bottom-right | top-right-and-bottom-left */</span>
+<span class="token property">border-radius</span><span class="token punctuation">:</span> 10px 5% / 20px 30px<span class="token punctuation">;</span>
+
+<span class="token comment">/* 水平 top-left | top-right 和 bottom-left | bottom-righ /
+   垂直 top-left | top-right-and-bottom-left | bottom-right */</span>
+<span class="token property">border-radius</span><span class="token punctuation">:</span> 10px 5px 2em / 20px 25px 30%<span class="token punctuation">;</span>
+
+<span class="token comment">/* 水平 top-left和bottom-right | top-right和bottom-left  /
+   垂直 top-left | top-right | bottom-right | bottom-left */</span>
+<span class="token property">border-radius</span><span class="token punctuation">:</span> 10px 5% / 20px 25em 30px 35em<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;length&gt;</td> <td>长度值数据类型 圆角</td></tr> <tr><td>&lt;percentage&gt;</td> <td>百分比数据类型 圆角</td></tr></tbody></table> <h2 id="边框图像"><a href="#边框图像" class="header-anchor">#</a> 边框图像</h2> <h3 id="边框图像超出"><a href="#边框图像超出" class="header-anchor">#</a> 边框图像超出</h3> <p>边框图像可超出边框盒的大小</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">border-image-outset ： [ &lt;length&gt; | &lt;number&gt; ]</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>4<span class="token punctuation">}</span>
+
+<span class="token comment">/* 单值 四面超出 */</span>
+<span class="token property">border-image-outset</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+<span class="token property">border-image-outset</span><span class="token punctuation">:</span> 1.5<span class="token punctuation">;</span>
+
+<span class="token comment">/* 垂直 | 水平 */</span>
+<span class="token property">border-image-outset</span><span class="token punctuation">:</span> 1 1.2<span class="token punctuation">;</span>
+
+<span class="token comment">/* 上 | 左右 | 下 */</span>
+<span class="token property">border-image-outset</span><span class="token punctuation">:</span> 30px 2 45px<span class="token punctuation">;</span>
+
+<span class="token comment">/* 上 | 右 | 下 | 左 */</span>
+<span class="token property">border-image-outset</span><span class="token punctuation">:</span> 7px 12px 14px 5px<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;length&gt;</td> <td>长度值数据类型 超出长度值</td></tr> <tr><td>&lt;percentage&gt;</td> <td>百分比数据类型 超出百分比</td></tr></tbody></table> <h3 id="边框图像平铺"><a href="#边框图像平铺" class="header-anchor">#</a> 边框图像平铺</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">border-image-repeat ：[ stretch | repeat | round | space ]</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>2<span class="token punctuation">}</span>
+
+<span class="token comment">/* 单值 */</span>
+<span class="token property">border-image-repeat</span><span class="token punctuation">:</span> stretch<span class="token punctuation">;</span>
+<span class="token property">border-image-repeat</span><span class="token punctuation">:</span> repeat<span class="token punctuation">;</span>
+<span class="token property">border-image-repeat</span><span class="token punctuation">:</span> round<span class="token punctuation">;</span>
+<span class="token property">border-image-repeat</span><span class="token punctuation">:</span> space<span class="token punctuation">;</span>
+
+<span class="token comment">/* 垂直 | 水平 */</span>
+<span class="token property">border-image-repeat</span><span class="token punctuation">:</span> round stretch<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>stretch</td> <td>图像拉伸撑满边框</td></tr> <tr><td><code>repeat</code></td> <td>图像平铺</td></tr> <tr><td><code>round</code></td> <td>图像等比例之间以拉伸进行图像平铺</td></tr> <tr><td>space</td> <td>图像等比例之间以间距进行图像平铺</td></tr></tbody></table> <h3 id="边框图像切片"><a href="#边框图像切片" class="header-anchor">#</a> 边框图像切片</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">border-image-slice ： &lt;number-percentage&gt;</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>4<span class="token punctuation">}</span> &amp;&amp; fill?
+where
+&lt;number-percentage&gt; = &lt;number&gt; | &lt;percentage&gt;
+
+<span class="token comment">/* 全切片 */</span>
+<span class="token property">border-image-slice</span><span class="token punctuation">:</span> 30%<span class="token punctuation">;</span>
+
+<span class="token comment">/* 垂直 | 水平 */</span>
+<span class="token property">border-image-slice</span><span class="token punctuation">:</span> 10% 30%<span class="token punctuation">;</span>
+
+<span class="token comment">/* 上 | 水平 | 下 */</span>
+<span class="token property">border-image-slice</span><span class="token punctuation">:</span> 30 30% 45<span class="token punctuation">;</span>
+
+<span class="token comment">/* 上 | 右 | 下 | 左 */</span>
+<span class="token property">border-image-slice</span><span class="token punctuation">:</span> 7 12 14 5<span class="token punctuation">;</span>
+
+<span class="token comment">/* 使用`fill`关键字*/</span>
+<span class="token property">border-image-slice</span><span class="token punctuation">:</span> 10% fill 7 12<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;number&gt;</td> <td>长度值数据类型 切片图像偏移像素比</td></tr> <tr><td>&lt;percentage&gt;</td> <td>百分比数据类型 切片图像百分比</td></tr> <tr><td>fill</td> <td>保留中间图像区域并将其显示为背景图像</td></tr></tbody></table> <h3 id="边框图像来源"><a href="#边框图像来源" class="header-anchor">#</a> 边框图像来源</h3> <div class="language-css extra-class"><pre class="language-css"><code>border-image-source ：none | &lt;image&gt;
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>none</td> <td>不使用边框图像。<code>border-style</code>改为显示定义的外观</td></tr> <tr><td>&lt;image&gt;</td> <td>边框的图像 数据类型</td></tr></tbody></table> <h3 id="边框图像宽度"><a href="#边框图像宽度" class="header-anchor">#</a> 边框图像宽度</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">border-image-width ：[ &lt;length-percentage&gt; | &lt;number&gt; | auto ]</span><span class="token punctuation">{</span>1<span class="token punctuation">,</span>4<span class="token punctuation">}</span>
+where
+&lt;length-percentage&gt; = &lt;length&gt; | &lt;percentage&gt;
+
+<span class="token comment">/* 关键字 */</span>
+<span class="token property">border-image-width</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+
+<span class="token comment">/* 长度 */</span>
+<span class="token property">border-image-width</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+
+<span class="token comment">/* 百分比 */</span>
+<span class="token property">border-image-width</span><span class="token punctuation">:</span> 25%<span class="token punctuation">;</span>
+
+<span class="token comment">/* 数值 */</span>
+<span class="token property">border-image-width</span><span class="token punctuation">:</span> 3<span class="token punctuation">;</span>
+
+<span class="token comment">/* 垂直 | 水平 */</span>
+<span class="token property">border-image-width</span><span class="token punctuation">:</span> 2em 3em<span class="token punctuation">;</span>
+
+<span class="token comment">/* 上 | 横向 | 下 */</span>
+<span class="token property">border-image-width</span><span class="token punctuation">:</span> 5% 15% 10%<span class="token punctuation">;</span>
+
+<span class="token comment">/* 上 | 右 | 下 | 左 */</span>
+<span class="token property">border-image-width</span><span class="token punctuation">:</span> 5% 2em 10% auto<span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;length&gt;</td> <td>长度值数据类型 设置宽度</td></tr> <tr><td>&lt;percentage&gt;</td> <td>百分比数据类型 设置宽度</td></tr> <tr><td>&lt;number&gt;</td> <td>数字数据类型 设置宽度倍数</td></tr> <tr><td>auto</td> <td><code>border-image-slice</code>相应尺寸大小</td></tr></tbody></table> <h3 id="简写属性-6"><a href="#简写属性-6" class="header-anchor">#</a> 简写属性</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token property">border-image</span><span class="token punctuation">:</span> &lt;<span class="token string">'border-image-source'</span>&gt; || &lt;<span class="token string">'border-image-slice'</span>&gt; [ / &lt;<span class="token string">'border-image-width'</span>&gt; | / &lt;<span class="token string">'border-image-width'</span>&gt;? / &lt;<span class="token string">'border-image-outset'</span>&gt; ]? || &lt;<span class="token string">'border-image-repeat'</span>&gt;
+
+<span class="token comment">/* source | slice */</span>
+<span class="token property">border-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>red<span class="token punctuation">,</span> blue<span class="token punctuation">)</span> 27<span class="token punctuation">;</span>
+
+<span class="token comment">/* source | slice | repeat */</span>
+<span class="token property">border-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">&quot;/images/border.png&quot;</span><span class="token punctuation">)</span></span> 27 space<span class="token punctuation">;</span>
+
+<span class="token comment">/* source | slice | width */</span>
+<span class="token property">border-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>red<span class="token punctuation">,</span> blue<span class="token punctuation">)</span> 27 / 35px<span class="token punctuation">;</span>
+
+<span class="token comment">/* source | slice | width | outset | repeat */</span>
+<span class="token property">border-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">&quot;/images/border.png&quot;</span><span class="token punctuation">)</span></span> 27 23 / 50px 30px / 1rem round space
+</code></pre></div><table><thead><tr><th>属性值</th> <th>描述</th></tr></thead> <tbody><tr><td>&lt;border-image-source&gt;</td> <td>图像来源</td></tr> <tr><td>&lt;border-image-slice&gt;</td> <td>图像切片 （上下左右）</td></tr> <tr><td>&lt;border-image-width&gt;</td> <td>图像宽度（上下左右）</td></tr> <tr><td>&lt;border-image-outset&gt;</td> <td>边框图像与元素外部边缘的距离（上下左右）</td></tr> <tr><td>&lt;border-image-repeat&gt;</td> <td>边框图像平铺</td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Doc/css/BoxModel/Box.html" class="prev">
+        边距
+      </a></span> <span class="next"><a href="/Doc/css/BoxModel/background.html">
+        背景属性
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Doc/assets/js/app.902b9bb4.js" defer></script><script src="/Doc/assets/js/2.ef0a363d.js" defer></script><script src="/Doc/assets/js/26.e14fc7b9.js" defer></script>
+  </body>
+</html>

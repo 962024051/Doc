@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JavaScript执行机制 | 语法规则文档</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?095b36cf1d99d72592fe316abe8bbbb2";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+        </script>
+    <meta name="description" content="个人程序员博客">
+    <meta name="keywords" content="it教程 语法 算法 设计 游览器 软件 http v8 JavaScript">
+    
+    <link rel="preload" href="/Doc/assets/css/0.styles.1a8630d9.css" as="style"><link rel="preload" href="/Doc/assets/js/app.902b9bb4.js" as="script"><link rel="preload" href="/Doc/assets/js/2.ef0a363d.js" as="script"><link rel="preload" href="/Doc/assets/js/8.ebae2304.js" as="script"><link rel="prefetch" href="/Doc/assets/js/10.bfe6afa3.js"><link rel="prefetch" href="/Doc/assets/js/100.e9ca59b4.js"><link rel="prefetch" href="/Doc/assets/js/101.350cd20f.js"><link rel="prefetch" href="/Doc/assets/js/102.2fa4848d.js"><link rel="prefetch" href="/Doc/assets/js/103.5fb219be.js"><link rel="prefetch" href="/Doc/assets/js/104.c8f406a4.js"><link rel="prefetch" href="/Doc/assets/js/105.a5cf4d82.js"><link rel="prefetch" href="/Doc/assets/js/106.26c15bbe.js"><link rel="prefetch" href="/Doc/assets/js/107.3b58e53b.js"><link rel="prefetch" href="/Doc/assets/js/108.701eed5f.js"><link rel="prefetch" href="/Doc/assets/js/109.73c4bd21.js"><link rel="prefetch" href="/Doc/assets/js/11.7a873ab3.js"><link rel="prefetch" href="/Doc/assets/js/110.4c23333e.js"><link rel="prefetch" href="/Doc/assets/js/111.6c703e6b.js"><link rel="prefetch" href="/Doc/assets/js/112.0a0f1811.js"><link rel="prefetch" href="/Doc/assets/js/113.4ca59157.js"><link rel="prefetch" href="/Doc/assets/js/114.4c45fa82.js"><link rel="prefetch" href="/Doc/assets/js/115.b54cb9e8.js"><link rel="prefetch" href="/Doc/assets/js/116.0a9f1718.js"><link rel="prefetch" href="/Doc/assets/js/117.0333d307.js"><link rel="prefetch" href="/Doc/assets/js/118.15810dc0.js"><link rel="prefetch" href="/Doc/assets/js/119.fb6bd50e.js"><link rel="prefetch" href="/Doc/assets/js/12.0310e52c.js"><link rel="prefetch" href="/Doc/assets/js/120.0d8912ce.js"><link rel="prefetch" href="/Doc/assets/js/121.1386ef9e.js"><link rel="prefetch" href="/Doc/assets/js/122.3b067808.js"><link rel="prefetch" href="/Doc/assets/js/123.5b03d87b.js"><link rel="prefetch" href="/Doc/assets/js/124.e0c0407d.js"><link rel="prefetch" href="/Doc/assets/js/125.3e7a53ae.js"><link rel="prefetch" href="/Doc/assets/js/126.95285aba.js"><link rel="prefetch" href="/Doc/assets/js/127.13293cc6.js"><link rel="prefetch" href="/Doc/assets/js/128.dba5bf2b.js"><link rel="prefetch" href="/Doc/assets/js/129.25ad6778.js"><link rel="prefetch" href="/Doc/assets/js/13.1ea9025d.js"><link rel="prefetch" href="/Doc/assets/js/130.333fabc8.js"><link rel="prefetch" href="/Doc/assets/js/131.9ee9c4d4.js"><link rel="prefetch" href="/Doc/assets/js/132.26dd28fb.js"><link rel="prefetch" href="/Doc/assets/js/133.72fe1499.js"><link rel="prefetch" href="/Doc/assets/js/134.581dfa04.js"><link rel="prefetch" href="/Doc/assets/js/135.e597f508.js"><link rel="prefetch" href="/Doc/assets/js/136.4e47ab6f.js"><link rel="prefetch" href="/Doc/assets/js/137.47023e2c.js"><link rel="prefetch" href="/Doc/assets/js/138.088bbc2c.js"><link rel="prefetch" href="/Doc/assets/js/139.c499414e.js"><link rel="prefetch" href="/Doc/assets/js/14.c7b4d29a.js"><link rel="prefetch" href="/Doc/assets/js/140.8f0391ef.js"><link rel="prefetch" href="/Doc/assets/js/141.cd869971.js"><link rel="prefetch" href="/Doc/assets/js/142.fb16fba9.js"><link rel="prefetch" href="/Doc/assets/js/143.c8152fca.js"><link rel="prefetch" href="/Doc/assets/js/144.be9e4201.js"><link rel="prefetch" href="/Doc/assets/js/145.7a714d15.js"><link rel="prefetch" href="/Doc/assets/js/146.6ba66980.js"><link rel="prefetch" href="/Doc/assets/js/147.57a2928a.js"><link rel="prefetch" href="/Doc/assets/js/148.9e971576.js"><link rel="prefetch" href="/Doc/assets/js/149.4f248cdc.js"><link rel="prefetch" href="/Doc/assets/js/15.05bd0385.js"><link rel="prefetch" href="/Doc/assets/js/150.0c757b5b.js"><link rel="prefetch" href="/Doc/assets/js/151.9994308b.js"><link rel="prefetch" href="/Doc/assets/js/152.6ad248d4.js"><link rel="prefetch" href="/Doc/assets/js/153.892dad93.js"><link rel="prefetch" href="/Doc/assets/js/154.41b98c54.js"><link rel="prefetch" href="/Doc/assets/js/155.26c67a5c.js"><link rel="prefetch" href="/Doc/assets/js/156.0d3ec8c6.js"><link rel="prefetch" href="/Doc/assets/js/157.b65ea00d.js"><link rel="prefetch" href="/Doc/assets/js/158.699d75aa.js"><link rel="prefetch" href="/Doc/assets/js/159.3a37359f.js"><link rel="prefetch" href="/Doc/assets/js/16.f9780864.js"><link rel="prefetch" href="/Doc/assets/js/160.3da88b09.js"><link rel="prefetch" href="/Doc/assets/js/161.2c6b66e6.js"><link rel="prefetch" href="/Doc/assets/js/162.6dbc37b9.js"><link rel="prefetch" href="/Doc/assets/js/163.593ce4e6.js"><link rel="prefetch" href="/Doc/assets/js/164.b9e67673.js"><link rel="prefetch" href="/Doc/assets/js/165.b84f179f.js"><link rel="prefetch" href="/Doc/assets/js/166.e8668636.js"><link rel="prefetch" href="/Doc/assets/js/167.3a5629c2.js"><link rel="prefetch" href="/Doc/assets/js/168.33878e6f.js"><link rel="prefetch" href="/Doc/assets/js/169.a4504567.js"><link rel="prefetch" href="/Doc/assets/js/17.c31c77a9.js"><link rel="prefetch" href="/Doc/assets/js/170.856970c7.js"><link rel="prefetch" href="/Doc/assets/js/171.28cfe480.js"><link rel="prefetch" href="/Doc/assets/js/172.f9cfa133.js"><link rel="prefetch" href="/Doc/assets/js/173.a892767c.js"><link rel="prefetch" href="/Doc/assets/js/174.2b94ba53.js"><link rel="prefetch" href="/Doc/assets/js/175.c147e1c4.js"><link rel="prefetch" href="/Doc/assets/js/176.ccfcf1f3.js"><link rel="prefetch" href="/Doc/assets/js/177.3135c930.js"><link rel="prefetch" href="/Doc/assets/js/178.fdd3aa9b.js"><link rel="prefetch" href="/Doc/assets/js/179.4c53d695.js"><link rel="prefetch" href="/Doc/assets/js/18.5aea91fc.js"><link rel="prefetch" href="/Doc/assets/js/180.80b88bac.js"><link rel="prefetch" href="/Doc/assets/js/181.c4ea4a54.js"><link rel="prefetch" href="/Doc/assets/js/182.1c41e0c8.js"><link rel="prefetch" href="/Doc/assets/js/183.0e7aa89c.js"><link rel="prefetch" href="/Doc/assets/js/184.ddb49815.js"><link rel="prefetch" href="/Doc/assets/js/185.43d46113.js"><link rel="prefetch" href="/Doc/assets/js/186.82d42bbb.js"><link rel="prefetch" href="/Doc/assets/js/187.798b8a87.js"><link rel="prefetch" href="/Doc/assets/js/188.9790c3f6.js"><link rel="prefetch" href="/Doc/assets/js/189.f18287c5.js"><link rel="prefetch" href="/Doc/assets/js/19.6d5427d3.js"><link rel="prefetch" href="/Doc/assets/js/190.bb521583.js"><link rel="prefetch" href="/Doc/assets/js/191.c1df15fe.js"><link rel="prefetch" href="/Doc/assets/js/192.8ae7fc57.js"><link rel="prefetch" href="/Doc/assets/js/193.a8ffb714.js"><link rel="prefetch" href="/Doc/assets/js/194.4ea6e979.js"><link rel="prefetch" href="/Doc/assets/js/195.661928cf.js"><link rel="prefetch" href="/Doc/assets/js/196.2871d148.js"><link rel="prefetch" href="/Doc/assets/js/197.a0fbbc31.js"><link rel="prefetch" href="/Doc/assets/js/198.8a6086cf.js"><link rel="prefetch" href="/Doc/assets/js/199.7c5a4941.js"><link rel="prefetch" href="/Doc/assets/js/20.21cbeb2c.js"><link rel="prefetch" href="/Doc/assets/js/200.1d71cca8.js"><link rel="prefetch" href="/Doc/assets/js/201.e0d7f426.js"><link rel="prefetch" href="/Doc/assets/js/202.cdbd7fa8.js"><link rel="prefetch" href="/Doc/assets/js/203.912f6eea.js"><link rel="prefetch" href="/Doc/assets/js/204.3056439f.js"><link rel="prefetch" href="/Doc/assets/js/205.5c3b6d2b.js"><link rel="prefetch" href="/Doc/assets/js/21.9240dd91.js"><link rel="prefetch" href="/Doc/assets/js/22.1f345886.js"><link rel="prefetch" href="/Doc/assets/js/23.1c444557.js"><link rel="prefetch" href="/Doc/assets/js/24.71752224.js"><link rel="prefetch" href="/Doc/assets/js/25.e4c40493.js"><link rel="prefetch" href="/Doc/assets/js/26.e14fc7b9.js"><link rel="prefetch" href="/Doc/assets/js/27.58dc8d5a.js"><link rel="prefetch" href="/Doc/assets/js/28.a28fd450.js"><link rel="prefetch" href="/Doc/assets/js/29.fa0f7af7.js"><link rel="prefetch" href="/Doc/assets/js/3.6b10a4e1.js"><link rel="prefetch" href="/Doc/assets/js/30.4c3f2713.js"><link rel="prefetch" href="/Doc/assets/js/31.7ba3335c.js"><link rel="prefetch" href="/Doc/assets/js/32.6b88210a.js"><link rel="prefetch" href="/Doc/assets/js/33.c99cb034.js"><link rel="prefetch" href="/Doc/assets/js/34.09cff75c.js"><link rel="prefetch" href="/Doc/assets/js/35.4a58c974.js"><link rel="prefetch" href="/Doc/assets/js/36.5c953857.js"><link rel="prefetch" href="/Doc/assets/js/37.1671a7ad.js"><link rel="prefetch" href="/Doc/assets/js/38.380133a3.js"><link rel="prefetch" href="/Doc/assets/js/39.2a488ded.js"><link rel="prefetch" href="/Doc/assets/js/4.ede3f828.js"><link rel="prefetch" href="/Doc/assets/js/40.cd7ef327.js"><link rel="prefetch" href="/Doc/assets/js/41.fe807f24.js"><link rel="prefetch" href="/Doc/assets/js/42.27a40b2f.js"><link rel="prefetch" href="/Doc/assets/js/43.e43f9d47.js"><link rel="prefetch" href="/Doc/assets/js/44.7163648d.js"><link rel="prefetch" href="/Doc/assets/js/45.cdf2f6e4.js"><link rel="prefetch" href="/Doc/assets/js/46.a59fbcbb.js"><link rel="prefetch" href="/Doc/assets/js/47.1791198b.js"><link rel="prefetch" href="/Doc/assets/js/48.30028b36.js"><link rel="prefetch" href="/Doc/assets/js/49.b1c8b036.js"><link rel="prefetch" href="/Doc/assets/js/5.1ced6b4d.js"><link rel="prefetch" href="/Doc/assets/js/50.3af400d8.js"><link rel="prefetch" href="/Doc/assets/js/51.479c455f.js"><link rel="prefetch" href="/Doc/assets/js/52.f6ba9656.js"><link rel="prefetch" href="/Doc/assets/js/53.75707613.js"><link rel="prefetch" href="/Doc/assets/js/54.e6ee4d56.js"><link rel="prefetch" href="/Doc/assets/js/55.cc09373a.js"><link rel="prefetch" href="/Doc/assets/js/56.ec5aa133.js"><link rel="prefetch" href="/Doc/assets/js/57.7c675995.js"><link rel="prefetch" href="/Doc/assets/js/58.232fb460.js"><link rel="prefetch" href="/Doc/assets/js/59.e7b2c02e.js"><link rel="prefetch" href="/Doc/assets/js/6.6179bc64.js"><link rel="prefetch" href="/Doc/assets/js/60.3a7ec6ee.js"><link rel="prefetch" href="/Doc/assets/js/61.c2e5ee30.js"><link rel="prefetch" href="/Doc/assets/js/62.917a57dc.js"><link rel="prefetch" href="/Doc/assets/js/63.f0f970d0.js"><link rel="prefetch" href="/Doc/assets/js/64.760669a7.js"><link rel="prefetch" href="/Doc/assets/js/65.598b113c.js"><link rel="prefetch" href="/Doc/assets/js/66.7eea90e5.js"><link rel="prefetch" href="/Doc/assets/js/67.98d79278.js"><link rel="prefetch" href="/Doc/assets/js/68.cafd5bb4.js"><link rel="prefetch" href="/Doc/assets/js/69.2ee8ebe5.js"><link rel="prefetch" href="/Doc/assets/js/7.50f6511d.js"><link rel="prefetch" href="/Doc/assets/js/70.952c63c9.js"><link rel="prefetch" href="/Doc/assets/js/71.63bcbbaf.js"><link rel="prefetch" href="/Doc/assets/js/72.94a7e949.js"><link rel="prefetch" href="/Doc/assets/js/73.3188d0f2.js"><link rel="prefetch" href="/Doc/assets/js/74.0249309e.js"><link rel="prefetch" href="/Doc/assets/js/75.339b50b9.js"><link rel="prefetch" href="/Doc/assets/js/76.c80850da.js"><link rel="prefetch" href="/Doc/assets/js/77.637f0447.js"><link rel="prefetch" href="/Doc/assets/js/78.6afbc5ab.js"><link rel="prefetch" href="/Doc/assets/js/79.570a3f7d.js"><link rel="prefetch" href="/Doc/assets/js/80.eb2b9bcb.js"><link rel="prefetch" href="/Doc/assets/js/81.2483faf4.js"><link rel="prefetch" href="/Doc/assets/js/82.1170a5d2.js"><link rel="prefetch" href="/Doc/assets/js/83.36776445.js"><link rel="prefetch" href="/Doc/assets/js/84.35189a6f.js"><link rel="prefetch" href="/Doc/assets/js/85.1f67cb7c.js"><link rel="prefetch" href="/Doc/assets/js/86.4ab10d4e.js"><link rel="prefetch" href="/Doc/assets/js/87.4c17d6f6.js"><link rel="prefetch" href="/Doc/assets/js/88.1051a51d.js"><link rel="prefetch" href="/Doc/assets/js/89.9578f894.js"><link rel="prefetch" href="/Doc/assets/js/9.b1ce05eb.js"><link rel="prefetch" href="/Doc/assets/js/90.3a3fcc25.js"><link rel="prefetch" href="/Doc/assets/js/91.4a263cec.js"><link rel="prefetch" href="/Doc/assets/js/92.a15168a9.js"><link rel="prefetch" href="/Doc/assets/js/93.f67ef2e1.js"><link rel="prefetch" href="/Doc/assets/js/94.28eac949.js"><link rel="prefetch" href="/Doc/assets/js/95.3016b7c1.js"><link rel="prefetch" href="/Doc/assets/js/96.aba3bc59.js"><link rel="prefetch" href="/Doc/assets/js/97.30a78601.js"><link rel="prefetch" href="/Doc/assets/js/98.f6776633.js"><link rel="prefetch" href="/Doc/assets/js/99.b27c6728.js">
+    <link rel="stylesheet" href="/Doc/assets/css/0.styles.1a8630d9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Doc/" class="home-link router-link-active"><!----> <span class="site-name">语法规则文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="css" class="dropdown-title"><span class="title">css</span> <span class="arrow down"></span></button> <button type="button" aria-label="css" class="mobile-dropdown-title"><span class="title">css</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Doc/css/Selectors/Selector.html" class="nav-link">
+  属性
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/Pretreatment/sass/variable.html" class="nav-link">
+  预处理
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="js" class="dropdown-title"><span class="title">js</span> <span class="arrow down"></span></button> <button type="button" aria-label="js" class="mobile-dropdown-title"><span class="title">js</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          参考
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/GlobalObjects/" class="nav-link">
+  内置对象
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/Statements/" class="nav-link">
+  语句
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/Operators/" class="nav-link">
+  表达式与运算符
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/TypeScript/" class="nav-link">
+  TypeScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          WebAPI(创作)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  Dom
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/WebAPI/Bom/" class="nav-link">
+  Bom
+</a></li></ul></li><li class="dropdown-item"><h4>
+          思维(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  算法
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  手撕原理
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  项目
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/vue/API/" class="nav-link">
+  API
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/vue/Router/" class="nav-link">
+  Router
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/vue/Vuex/" class="nav-link">
+  Vuex
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  React
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  Angular
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工程化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/vue/CLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/CLI/" class="nav-link">
+  ReactCLI
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/CLI/Sequelize-CLI.html" class="nav-link">
+  Sequelize
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Engineering/Dependency/npm.html" class="nav-link">
+  依赖管理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          专栏
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  游览器
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据" class="dropdown-title"><span class="title">数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据" class="mobile-dropdown-title"><span class="title">数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Doc/db/MySql/mingling.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/db/Redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/db/MongoDB/" class="nav-link">
+  MongoDB
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端(待定)" class="dropdown-title"><span class="title">后端(待定)</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端(待定)" class="mobile-dropdown-title"><span class="title">后端(待定)</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          语言(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  node
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/962024051/Doc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="css" class="dropdown-title"><span class="title">css</span> <span class="arrow down"></span></button> <button type="button" aria-label="css" class="mobile-dropdown-title"><span class="title">css</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Doc/css/Selectors/Selector.html" class="nav-link">
+  属性
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/Pretreatment/sass/variable.html" class="nav-link">
+  预处理
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="js" class="dropdown-title"><span class="title">js</span> <span class="arrow down"></span></button> <button type="button" aria-label="js" class="mobile-dropdown-title"><span class="title">js</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          参考
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/GlobalObjects/" class="nav-link">
+  内置对象
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/Statements/" class="nav-link">
+  语句
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/Operators/" class="nav-link">
+  表达式与运算符
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/TypeScript/" class="nav-link">
+  TypeScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          WebAPI(创作)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  Dom
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/WebAPI/Bom/" class="nav-link">
+  Bom
+</a></li></ul></li><li class="dropdown-item"><h4>
+          思维(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  算法
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  手撕原理
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  项目
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/vue/API/" class="nav-link">
+  API
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/vue/Router/" class="nav-link">
+  Router
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/vue/Vuex/" class="nav-link">
+  Vuex
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  React
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  Angular
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工程化
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/vue/CLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/CLI/" class="nav-link">
+  ReactCLI
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/CLI/Sequelize-CLI.html" class="nav-link">
+  Sequelize
+</a></li><li class="dropdown-subitem"><a href="/Doc/js/Engineering/Dependency/npm.html" class="nav-link">
+  依赖管理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          专栏
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  游览器
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据" class="dropdown-title"><span class="title">数据</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据" class="mobile-dropdown-title"><span class="title">数据</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Doc/db/MySql/mingling.html" class="nav-link">
+  MySql
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/db/Redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/Doc/db/MongoDB/" class="nav-link">
+  MongoDB
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端(待定)" class="dropdown-title"><span class="title">后端(待定)</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端(待定)" class="mobile-dropdown-title"><span class="title">后端(待定)</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          语言(待定)
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Doc/js/Reference/" class="nav-link">
+  node
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/962024051/Doc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html" aria-current="page" class="active sidebar-link">JavaScript执行机制</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#执行顺序" class="sidebar-link">执行顺序</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#编译阶段" class="sidebar-link">编译阶段</a></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#执行阶段" class="sidebar-link">执行阶段</a></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#同名优先级" class="sidebar-link">同名优先级</a></li></ul></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#执行上下文" class="sidebar-link">执行上下文</a></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#调用栈" class="sidebar-link">调用栈</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#栈溢出" class="sidebar-link">栈溢出</a></li></ul></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#块级作用域" class="sidebar-link">块级作用域</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#es6之前作用域" class="sidebar-link">ES6之前作用域</a></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#变量提升与作用域" class="sidebar-link">变量提升与作用域</a></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#es6之后作用域" class="sidebar-link">ES6之后作用域</a></li></ul></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#作用域链和闭包" class="sidebar-link">作用域链和闭包</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#outer" class="sidebar-link">outer</a></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#作用域链" class="sidebar-link">作用域链</a></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#词法作用域" class="sidebar-link">词法作用域</a></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#全局作用域" class="sidebar-link">全局作用域</a></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#闭包" class="sidebar-link">闭包</a></li></ul></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#this" class="sidebar-link">this</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#全局执行上下文中的-this" class="sidebar-link">全局执行上下文中的 this</a></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#函数执行上下文中的-this" class="sidebar-link">函数执行上下文中的 this</a></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#this-的设计缺陷以及应对方案" class="sidebar-link">this 的设计缺陷以及应对方案</a></li><li class="sidebar-sub-header"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/jsExecutionMechanism.html#this避坑" class="sidebar-link">this避坑</a></li></ul></li></ul></li><li><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/MacroBrowser.html" class="sidebar-link">宏观游览器</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="javascript执行机制"><a href="#javascript执行机制" class="header-anchor">#</a> JavaScript执行机制</h1> <h2 id="执行顺序"><a href="#执行顺序" class="header-anchor">#</a> 执行顺序</h2> <h3 id="编译阶段"><a href="#编译阶段" class="header-anchor">#</a> 编译阶段</h3> <ul><li>变量提升
+<ul><li>JavaScript 引擎把变量的声明部分和函数的声明部分提升到代码开头。</li> <li>变量的默认值设置为undefined</li></ul></li> <li>经过编译后，会生成两部分内容：执行上下文和可执行代码</li></ul> <h3 id="执行阶段"><a href="#执行阶段" class="header-anchor">#</a> 执行阶段</h3> <ul><li>JavaScript 引擎开始执行“可执行代码”，按照顺序一行一行地执行</li></ul> <h3 id="同名优先级"><a href="#同名优先级" class="header-anchor">#</a> 同名优先级</h3> <ul><li>同名的函数，JavaScript编译阶段会选择最后声明。</li> <li>变量和函数同名，那么在编译阶段，变量的声明会被忽略</li></ul> <h2 id="执行上下文"><a href="#执行上下文" class="header-anchor">#</a> 执行上下文</h2> <ul><li>当 JavaScript 执行全局代码的时候，会编译全局代码并创建全局执行上下文，而且在
+整个页面的生存周期内，全局执行上下文只有一份。</li> <li>当调用一个函数的时候，函数体内的代码会被编译，并创建函数执行上下文，一般情况
+下，函数执行结束之后，创建的函数执行上下文会被销毁。</li> <li>当使用 eval 函数的时候，eval 的代码也会被编译，并创建执行上下文。</li></ul> <h2 id="调用栈"><a href="#调用栈" class="header-anchor">#</a> 调用栈</h2> <p>JavaScript 引擎正是利用栈的结构来管理执行上下文的。在执行上下文创建好后，JavaScript 引擎会将执行上下文压入栈中，<strong>后进先出</strong>的规则，也可以叫<strong>执行上下文栈</strong></p> <ul><li>每调用一个函数，JavaScript 引擎会为其创建执行上下文，并把该执行上下文压入调用
+栈，然后 JavaScript 引擎开始执行函数代码。</li> <li>如果在一个函数 A 中调用了另外一个函数 B，那么 JavaScript 引擎会为 B 函数创建执行
+上下文，并将 B 函数的执行上下文压入栈顶。</li> <li>当前函数执行完毕后，JavaScript 引擎会将该函数的执行上下文弹出栈。</li> <li>当分配的调用栈空间被占满时，会引发“堆栈溢出”问题。</li></ul> <h3 id="栈溢出"><a href="#栈溢出" class="header-anchor">#</a> 栈溢出</h3> <p>调用栈是有大小的，当入栈的执行上下文超过一定数目，JavaScript 引擎就会报错</p> <h2 id="块级作用域"><a href="#块级作用域" class="header-anchor">#</a> 块级作用域</h2> <ul><li>在程序中定义变量的区域，该位置决定了变量的生命周期。</li> <li>通俗地理解，作用域就是变量与函数的可访问范围，即作用域控制着变量和函数的可见性和生命周期</li> <li>使用一对大括号包裹的一段代码，比如函数、判断语句、循环语句，甚至单独的一个{}都可以被看作是一个块级作用域</li></ul> <h3 id="es6之前作用域"><a href="#es6之前作用域" class="header-anchor">#</a> ES6之前作用域</h3> <ul><li><strong>全局作用域</strong>中的对象在代码中的任何地方都能访问，其生命周期伴随着页面的生命周期。</li> <li><strong>函数作用域</strong>就是在函数内部定义的变量或者函数，并且定义的变量或者函数只能在函数内部被访问。函数执行结束之后，函数内部定义的变量会被<strong>销毁</strong></li></ul> <h3 id="变量提升与作用域"><a href="#变量提升与作用域" class="header-anchor">#</a> 变量提升与作用域</h3> <ul><li>变量容易在不被察觉的情况下被覆盖掉</li> <li>本应销毁的变量没有被销毁</li></ul> <h3 id="es6之后作用域"><a href="#es6之后作用域" class="header-anchor">#</a> ES6之后作用域</h3> <p>JavaScript 引擎支持了变量提升和块级作用域了</p> <p>块级作用域就是通过词法环境的栈结构来实现的，而变量提升是通过变量环境来实现，通过这两者的结合</p> <ul><li><p>编译并创建执行上下文</p> <ul><li>函数内部通过 var 声明的变量，在编译阶段全都被存放到变量环境里面了。</li> <li>通过 let 声明的变量，在编译阶段会被存放到词法环境中。</li> <li>在函数的作用域内部，通过 let 声明的变量并没有被存放到词法环境中</li></ul></li> <li><p>继续执行代码环境</p> <ul><li>词法环境( let 或者 const 声明的变量)
+<ul><li>类似一个小型栈结构，栈底是函数最外层的变量，</li> <li>进入一个作用域块后，就会把该作用域块内部的变量压到栈顶；</li> <li>当作用域执行完成之后，该作用域的信息就会从栈顶弹出</li></ul></li> <li>变量环境
+<ul><li>沿着词法环境的栈顶向下查询，</li> <li>如果在词法环境中的某个块中查找到了，就直接返回给 JavaScript 引擎，</li> <li>如果没有查找到，那么继续在变量环境中查找。</li></ul></li></ul></li></ul> <h2 id="作用域链和闭包"><a href="#作用域链和闭包" class="header-anchor">#</a> 作用域链和闭包</h2> <h3 id="outer"><a href="#outer" class="header-anchor">#</a> outer</h3> <p>每个执行上下文的变量环境中，都包含了一个外部引用，用来指向外部的执行上下 文</p> <h3 id="作用域链"><a href="#作用域链" class="header-anchor">#</a> 作用域链</h3> <p>函数的 outer 都是指向全局上下文的，这也就意味着如果函数中使用了外部变量，那么 JavaScript 引擎会去全局执行上下文中查找.查找的链条就称为作用域链。</p> <h3 id="词法作用域"><a href="#词法作用域" class="header-anchor">#</a> 词法作用域</h3> <p>词法作用域就是指作用域是由代码中函数声明的位置来决定的，所以词法作用域是静态的作 用域，通过它就能够预测代码在执行过程中如何查找标识符。</p> <p>如果函数使用了一个它们没有定义的变量，那么它们会到全局作用域去查找</p> <p>词法作用域是代码阶段就决定好的，和函数是怎么调用的没有关系</p> <h3 id="全局作用域"><a href="#全局作用域" class="header-anchor">#</a> 全局作用域</h3> <ul><li>首先是在<strong>函数</strong>的执行上下文中查找</li> <li>但因为<strong>函数</strong>的执行上下文中没有定义<strong>变量</strong>，所以根据词法作用域的规则，</li> <li>下一步就在<strong>函数</strong>的外部作用域中查找</li></ul> <h3 id="闭包"><a href="#闭包" class="header-anchor">#</a> 闭包</h3> <p>在 JavaScript 中，根据词法作用域的规则，内部函数总是可以访问其外部函数中声明的变量，当通过调用一个外部函数返回一个 内部函数后，即使该外部函数已经执行结束了，但是内部函数引用外部函数的变量依然保存 在内存中，我们就把这些变量的集合称为闭包。</p> <p>如果该闭包会一直使用，那么它可以作为 全局变量而存在；但如果使用频率不高，而且占用内存又比较大的话，那就尽量让它成为一 个局部变量。</p> <h2 id="this"><a href="#this" class="header-anchor">#</a> this</h2> <h3 id="全局执行上下文中的-this"><a href="#全局执行上下文中的-this" class="header-anchor">#</a> 全局执行上下文中的 this</h3> <p>全局执行上下文中的 this 是指向 window 对象的。这也是 this 和作用域链的唯一交点，作用域链的最底端包含了 window 对象，全局执行上下文中的 this 也是指向 window 对象</p> <h3 id="函数执行上下文中的-this"><a href="#函数执行上下文中的-this" class="header-anchor">#</a> 函数执行上下文中的 this</h3> <p>通过函数的 <strong>call</strong>和 <strong>bind</strong>和<strong>apply</strong>方法设置</p> <p>通过对象调用方法设置</p> <ul><li><p>使用对象来调用其内部的一个方法，该方法的 this 是指向对象本身的。</p></li> <li><p>在全局环境中调用一个函数，函数内部的 this 指向的是全局变量 window。</p></li> <li><p>通过一个对象来调用其内部的一个方法，该方法的执行上下文中的 this 指向对象本身</p></li></ul> <p>通过构造函数中设置</p> <ol><li>创建一个空的简单JavaScript对象（即<code>**{}**</code>）；</li> <li>链接该对象（设置该对象的<strong>constructor</strong>）到另一个对象 ；</li> <li>将步骤1新创建的对象作为<code>**this**</code>的上下文 ；</li> <li>如果该函数没有返回对象，则返回<code>**this**</code>。</li></ol> <h3 id="this-的设计缺陷以及应对方案"><a href="#this-的设计缺陷以及应对方案" class="header-anchor">#</a> this 的设计缺陷以及应对方案</h3> <ul><li><p>嵌套函数中的 this 不会从外层函数中继承</p> <ul><li>第一种是把 this 保存为一个 self 变量，再利用变量的作用域机制传递给嵌套函数。</li> <li>第二种是继续使用 this，但是要把嵌套函数改为箭头函数，因为箭头函数没有自己的执行上下文，所以它会继承调用函数中的 this</li></ul></li> <li><p>普通函数中的 this 默认指向全局对象 window</p></li></ul> <h3 id="this避坑"><a href="#this避坑" class="header-anchor">#</a> this避坑</h3> <ol><li>当函数作为对象的方法调用时，函数中的 this 就是该对象；</li> <li>当函数被正常调用时，在严格模式下，this 值是 undefined，非严格模式下 this 指向的是全局对象 window；</li> <li>嵌套函数中的 this 不会继承外层函数的 this 值。</li> <li>箭头函数没有自己的执行上下文，所以箭头函数的 this 就是它外层函数的 this</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/Doc/Frame/Browser/WorkingPrinciplePractice/MacroBrowser.html">
+        宏观游览器
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Doc/assets/js/app.902b9bb4.js" defer></script><script src="/Doc/assets/js/2.ef0a363d.js" defer></script><script src="/Doc/assets/js/8.ebae2304.js" defer></script>
+  </body>
+</html>
